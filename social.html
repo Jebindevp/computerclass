@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>SR INDIAN - Shoping Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    /* ===== BODY ===== */
+    body {
+      background: #020617;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      padding: 30px;
+    }
+
+    .title {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* ===== GRID ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* Desktop */
+      gap: 20px;
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    /* ZOOM EFFECT */
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* ===== OVERLAY ===== */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding-bottom: 20px;
+      color: #fff;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .card:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h4 {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    /* ===== BUTTON ===== */
+    .btn {
+      background: linear-gradient(135deg, #00f5c4, #3b82f6);
+      color: #000;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    /* Tablet */
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Mobile (2 cards per row) */
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card img {
+        height: 150px;
+      }
+    }
+
+    /* Small Mobile */
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* still 2 */
+      }
+
+      .card img {
+        height: 130px;
+      }
+
+      .overlay h4 {
+        font-size: 14px;
+      }
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(255, 75, 43, 0.7);
+    }
+
+    .back-btn i {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">Shoping Services <br><br>
+
+      <div class="date-time-box">
+        <span id="live-date"></span>
+        <span id="live-time"></span>
+      </div>
+    </h2>
+
+    <style>
+      #live-date,
+      #live-time {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 600;
+      }
+
+      #live-date i {
+        color: #38bdf8;
+      }
+
+      #live-time i {
+        color: #22c55e;
+      }
+    </style>
+
+    <script>
+      function updateDateTime() {
+
+        const now = new Date();
+
+        const date = now.toLocaleDateString('en-IN', {
+          weekday: 'long',
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        });
+
+        const time = now.toLocaleTimeString('en-IN', {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        });
+
+        document.getElementById('live-date').innerHTML =
+          '<i class="bi bi-calendar-event"></i> ' + date;
+
+        document.getElementById('live-time').innerHTML =
+          '<i class="bi bi-clock-history"></i> ' + time;
+      }
+
+      updateDateTime();
+      setInterval(updateDateTime, 1000);
+    </script>
+
+    <!-- BACK BUTTON -->
+    <div style="margin-bottom: 20px;">
+      <a href="services.html" class="back-btn"><i class="bi bi-arrow-left-circle"></i> Back</a>
+    </div>
+
+    <div class="grid">
+
+      <!-- WhatsApp -->
+      <div class="card">
+        <img src="assets/images/social/so7.jpg" />
+        <div class="overlay">
+          <h4>WhatsApp</h4>
+          <a href="https://web.whatsapp.com/" class="btn">Apply</a>
+        </div>
+      </div>
+
+      <!-- Facebook -->
+      <div class="card">
+        <img src="assets/images/social/so2.jpg" />
+        <div class="overlay">
+          <h4>Facebook</h4>
+          <a href="https://www.facebook.com/" class="btn">Apply</a>
+        </div>
+      </div>
+
+      <!-- Instagram  -->
+      <div class="card">
+        <img src="assets/images/social/so3.jpg" />
+        <div class="overlay">
+          <h4>Instagram </h4>
+          <a href="https://www.instagram.com/accounts/login/?hl=en" class="btn">Apply</a>
+        </div>
+      </div>
+
+      <!-- youtube -->
+      <div class="card">
+        <img src="assets/images/social/so1.jpg" />
+        <div class="overlay">
+          <h4>youtube</h4>
+          <a href="https://www.youtube.com/" class="btn">Apply</a>
+        </div>
+      </div>
+
+      <!-- ShareChat  -->
+      <div class="card">
+        <img src="assets/images/social/so4.jpg" />
+        <div class="overlay">
+          <h4>ShareChat </h4>
+          <a href="https://sharechat.com/recharge" class="btn">Apply</a>
+        </div>
+      </div>
+
+      <!--  LinkedIn -->
+      <div class="card">
+        <img src="assets/images/social/so5.jpg" />
+        <div class="overlay">
+          <h4> LinkedIn</h4>
+          <a href="https://www.linkedin.com/company/login/" class="btn">Apply</a>
+        </div>
+      </div>
+
+      <!-- X (formerly Twitter) -->
+      <div class="card">
+        <img src="assets/images/social/so6.jpg" />
+        <div class="overlay">
+          <h4>X (formerly Twitter)</h4>
+          <a href="https://x.com/twitt_login?lang=en" class="btn">Apply</a>
+        </div>
+      </div>
+
+      <!-- Telegram -->
+      <div class="card">
+        <img src="assets/images/social/so8.jpg" />
+        <div class="overlay">
+          <h4>Telegram </h4>
+          <a href="https://web.telegram.org/" class="btn">Apply</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

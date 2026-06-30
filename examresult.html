@@ -1,0 +1,426 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SR INDIAN - Exam Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <style>
+      /* ===== BODY ===== */
+      body {
+        background: #020617;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+      }
+      
+      /* ===== CONTAINER ===== */
+      .container {
+        padding: 30px;
+      }
+      
+      /* ===== TITLE ===== */
+      .title {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+      }
+      
+      /* ===== GRID ===== */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Desktop */
+        gap: 20px;
+      }
+      
+      /* ===== CARD ===== */
+      .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        transition: 0.3s;
+      }
+      
+      .card:hover {
+        transform: translateY(-6px);
+      }
+      
+      /* IMAGE */
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+      
+      .card:hover img {
+        transform: scale(1.1);
+      }
+      
+      /* ===== OVERLAY ===== */
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        opacity: 0;
+        transition: 0.4s;
+        text-align: center;
+      }
+      
+      .card:hover .overlay {
+        opacity: 1;
+      }
+      
+      .overlay h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      
+      /* ===== BUTTON ===== */
+      .btn {
+        background: linear-gradient(135deg, #00f5c4, #3b82f6);
+        color: #000;
+        padding: 7px 14px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .btn:hover {
+        transform: scale(1.1);
+        background: linear-gradient(135deg, #00c9a7, #2563eb);
+      }
+      
+      /* ===== TABLET ===== */
+      @media (max-width: 992px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      /* ===== MOBILE ===== */
+      @media (max-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr); /* 2 cards */
+          gap: 15px;
+        }
+      
+        .card img {
+          height: 140px;
+        }
+      
+        .title {
+          font-size: 22px;
+        }
+      }
+      
+      /* ===== SMALL MOBILE (OPTIONAL) ===== */
+      @media (max-width: 400px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      
+      /* ===== BACK BUTTON ===== */
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #fff;
+        background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+        transition: 0.3s;
+      }
+      
+      .back-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        color: #fff;
+        box-shadow: 0 8px 20px rgba(255, 75, 43, 0.7);
+      }
+      
+      .back-btn i {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 class="title">Exam Results <br><br>
+
+      <div class="date-time-box">
+            <span id="live-date"></span>
+            <span id="live-time"></span>
+      </div>
+      </h2>
+
+      <style>
+        #live-date,
+        #live-time{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            gap:8px;
+            font-weight:600;
+        }
+
+        #live-date i{
+            color:#38bdf8;
+        }
+
+        #live-time i{
+            color:#22c55e;
+        }
+      </style>
+
+      <script>
+        function updateDateTime() {
+
+            const now = new Date();
+
+            const date = now.toLocaleDateString('en-IN', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+
+            const time = now.toLocaleTimeString('en-IN', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+
+            document.getElementById('live-date').innerHTML =
+            '<i class="bi bi-calendar-event"></i> ' + date;
+
+            document.getElementById('live-time').innerHTML =
+            '<i class="bi bi-clock-history"></i> ' + time;
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+      </script>
+
+      <!-- BACK BUTTON -->
+      <div style="margin-bottom: 20px;">
+        <a href="services.html" class="back-btn"><i class="bi bi-arrow-left-circle"></i> Back</a>
+      </div>
+
+      <div class="grid">
+
+        <!-- TN School HallTicket -->
+        <div class="card">
+          <img src="assets/images/result/er14.jpg" alt="TN School HallTicket">
+
+          <div class="overlay">
+            <h4>TN School HallTicket</h4>
+
+            <a href="https://www.dge.tn.gov.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- TN School Marksheet -->
+        <div class="card">
+          <img src="assets/images/result/er15.jpg" alt="TN School Marksheet">
+
+          <div class="overlay">
+            <h4>TN School Marksheet</h4>
+
+            <a href="https://www.epettagam.tn.gov.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- 10 th Standard -->
+        <div class="card">
+          <img src="assets/images/result/er1.jpg" alt="10 th Standard">
+
+          <div class="overlay">
+            <h4>10 th Standard</h4>
+
+            <a href="https://www.dge.tn.gov.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- 12 th Standard -->
+        <div class="card">
+          <img src="assets/images/result/er2.jpg" alt="12 th Standard">
+
+          <div class="overlay">
+            <h4>12 th Standard</h4>
+
+            <a href="https://www.dge.tn.gov.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+   
+        <!-- 10th CBSE -->
+        <div class="card">
+          <img src="assets/images/result/er3.jpg" alt="10th CBSE">
+
+          <div class="overlay">
+            <h4>10th CBSE</h4>
+
+            <a href="https://cbseresults.nic.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- 12th CBSE -->
+        <div class="card">
+          <img src="assets/images/result/er4.jpg" alt="12th CBSE">
+
+          <div class="overlay">
+            <h4>12th CBSE</h4>
+
+            <a href="https://cbseresults.nic.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Engineering -->
+        <div class="card">
+          <img src="assets/images/result/er5.jpg" alt="Engineering">
+
+          <div class="overlay">
+            <h4>Engineering</h4>
+
+            <a href="https://iieinstitution.com/examination-result" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Medical -->
+        <div class="card">
+          <img src="assets/images/result/er6.jpg" alt="Medical">
+
+          <div class="overlay">
+            <h4>Medical</h4>
+
+            <a href="https://results.tamilnadumedicaluniversity.com/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- University -->
+        <div class="card">
+          <img src="assets/images/result/er7.jpg" alt="University">
+
+          <div class="overlay">
+            <h4> Anna University</h4>
+
+            <a href="https://coe1.annauniv.edu/home/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Neet -->
+        <div class="card">
+          <img src="assets/images/result/er8.jpg" alt="Neet">
+
+          <div class="overlay">
+            <h4>Neet</h4>
+
+            <a href="https://nta.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Police -->
+        <div class="card">
+          <img src="assets/images/result/er9.jpg" alt="Police">
+
+          <div class="overlay">
+            <h4>Police</h4>
+
+            <a href="https://www.tnusrb.tn.gov.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Government -->
+        <div class="card">
+          <img src="assets/images/result/er10.jpg" alt="Government">
+
+          <div class="overlay">
+            <h4>Government</h4>
+
+            <a href="https://www.tnpsc.gov.in/english/latest_results.aspx?c=4593" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- TNPSE  -->
+        <div class="card">
+          <img src="assets/images/result/er11.jpg" alt="TNPSE ">
+
+          <div class="overlay">
+            <h4>TNPSE </h4>
+
+            <a href="https://tnpscresults.tn.gov.in/grp4/index.aspx" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+        
+        <!-- Steno -->
+        <div class="card">
+          <img src="assets/images/result/er12.jpg" alt="Steno">
+
+          <div class="overlay">
+            <h4>Steno</h4>
+
+            <a href="https://tndtegteonline.in/GTEOnline" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- TypeWritting -->
+        <div class="card">
+          <img src="assets/images/result/er13.jpg" alt="TypeWritting">
+
+          <div class="overlay">
+            <h4>TypeWritting</h4>
+
+            <a href="https://tndtegteonline.in/GTEOnline" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

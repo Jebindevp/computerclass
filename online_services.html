@@ -1,0 +1,703 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>SR INDIAN - Smart Online Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    /* ===== BODY ===== */
+    body {
+      background: #020617;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      padding: 30px;
+    }
+
+    /* ===== TITLE ===== */
+    .title {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    /* ===== GRID ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* Desktop */
+      gap: 20px;
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    /* IMAGE */
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* ===== OVERLAY ===== */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      opacity: 0;
+      transition: 0.4s;
+      text-align: center;
+    }
+
+    .card:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h4 {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    /* ===== BUTTON ===== */
+    .btn {
+      background: linear-gradient(135deg, #00f5c4, #3b82f6);
+      color: #000;
+      padding: 7px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #00c9a7, #2563eb);
+    }
+
+    /* ===== TABLET ===== */
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards */
+        gap: 15px;
+      }
+
+      .card img {
+        height: 140px;
+      }
+
+      .title {
+        font-size: 22px;
+      }
+    }
+
+    /* ===== SMALL MOBILE (OPTIONAL) ===== */
+    @media (max-width: 400px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(255, 75, 43, 0.7);
+    }
+
+    .back-btn i {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">Online Applications <br> <br>
+
+      <div class="date-time-box">
+        <span id="live-date"></span>
+        <span id="live-time"></span>
+      </div>
+    </h2>
+
+    <style>
+      #live-date,
+      #live-time {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 600;
+      }
+
+      #live-date i {
+        color: #38bdf8;
+      }
+
+      #live-time i {
+        color: #22c55e;
+      }
+    </style>
+
+    <script>
+      function updateDateTime() {
+
+        const now = new Date();
+
+        const date = now.toLocaleDateString('en-IN', {
+          weekday: 'long',
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        });
+
+        const time = now.toLocaleTimeString('en-IN', {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        });
+
+        document.getElementById('live-date').innerHTML =
+          '<i class="bi bi-calendar-event"></i> ' + date;
+
+        document.getElementById('live-time').innerHTML =
+          '<i class="bi bi-clock-history"></i> ' + time;
+      }
+
+      updateDateTime();
+      setInterval(updateDateTime, 1000);
+    </script>
+
+    <!-- BACK BUTTON -->
+    <div style="margin-bottom: 20px;">
+      <a href="services.html" class="back-btn"><i class="bi bi-arrow-left-circle"></i> Back</a>
+    </div>
+
+    <div class="grid">
+
+      <!-- PAN CARD -->
+      <div class="card">
+        <img src="assets/images/online/oa1.jpg" alt="PAN Card">
+
+        <div class="overlay">
+          <h4>PAN Card</h4>
+
+          <a href="https://www.psaonline.utiitsl.com/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- AADHAAR -->
+      <div class="card">
+        <img src="assets/images/online/oa2.jpg" alt="Aadhaar">
+
+        <div class="overlay">
+          <h4>Aadhaar Card</h4>
+
+          <a href="https://uidai.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- RATION -->
+      <div class="card">
+        <img src="assets/images/online/oa3.jpg" alt="Ration Card">
+
+        <div class="overlay">
+          <h4>Ration Card</h4>
+
+          <a href="https://www.tnpds.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Passport -->
+      <div class="card">
+        <img src="assets/images/online/oa4.jpg" alt="Passport">
+
+        <div class="overlay">
+          <h4>Passport</h4>
+
+          <a href="https://www.passportindia.gov.in/psp" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Voter Id -->
+      <div class="card">
+        <img src="assets/images/online/oa5.jpg" alt="Voter Id">
+
+        <div class="overlay">
+          <h4>Voter Id</h4>
+
+          <a href="https://voters.eci.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- DRIVING LICENSE -->
+      <div class="card">
+        <img src="assets/images/online/oa6.jpg" alt="Driving License">
+
+        <div class="overlay">
+          <h4>Driving License</h4>
+
+          <a href="https://tnsta.gov.in/Indexes/service_licenseservices" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- E-SEVAI -->
+      <div class="card">
+        <img src="assets/images/online/oa7.jpg" alt="E-Sevai">
+
+        <div class="overlay">
+          <h4>E-Sevai</h4>
+
+          <a href="https://www.tnesevai.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- E-SEVAI Certificate Download -->
+      <div class="card">
+        <img src="assets/images/online/oa7.jpg" alt="E-Sevai Certificate Download">
+
+        <div class="overlay">
+          <h4>E-Sevai Certificate Download</h4>
+
+          <a href="https://tnedistrict.tn.gov.in/tneda/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- community certificate Download -->
+      <div class="card">
+        <img src="assets/images/online/oa26.jpg" alt="community certificate Download">
+
+        <div class="overlay">
+          <h4>community certificate Download</h4>
+
+          <a href="https://tnedistrict.tn.gov.in/tneda/VerifyCerti.xhtml" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- income certificate Download -->
+      <div class="card">
+        <img src="assets/images/online/oa27.jpg" alt="income certificate Download">
+
+        <div class="overlay">
+          <h4>income certificate Download</h4>
+
+          <a href="https://tnedistrict.tn.gov.in/tneda/VerifyCerti.xhtml" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- TN Scholarship -->
+      <div class="card">
+        <img src="assets/images/online/oa28.jpg" alt="TN Scholarship">
+
+        <div class="overlay">
+          <h4>TN Scholarship</h4>
+
+          <a href="https://ssp24-25.tnega.org/institute/all_schemes.html" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- National Scholarship Portal (NSP) -->
+      <div class="card">
+        <img src="assets/images/online/oa29.jpg" alt="National Scholarship Portal (NSP)">
+
+        <div class="overlay">
+          <h4>National Scholarship Portal (NSP)</h4>
+
+          <a href="https://scholarships.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- NALA VARIYAM -->
+      <div class="card">
+        <img src="assets/images/online/oa8.jpg" alt="Nala Variyam">
+
+        <div class="overlay">
+          <h4>Nala Variyam</h4>
+
+          <a href="https://labour.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- EMPLOYMENT REGISTRATION Of Tamil Nadu -->
+      <div class="card">
+        <img src="assets/images/online/oa9.jpg" alt="Employment Registration">
+
+        <div class="overlay">
+          <h4>Employment Registration Of Tamil Nadu</h4>
+
+          <a href="https://tnvelaivaaippu.gov.in/Empower/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- EMPLOYMENT REGISTRATION Of KanyaKumari -->
+      <div class="card">
+        <img src="assets/images/online/oa9.jpg" alt="Employment Registration">
+
+        <div class="overlay">
+          <h4>Employment Registration Of KanyaKumari</h4>
+
+          <a href="https://tnvelaivaaippu.gov.in/Empower/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Magalir Urimai Thogai -->
+      <div class="card">
+        <img src="assets/images/online/oa11.jpg" alt="Magalir Urimai Thogai">
+
+        <div class="overlay">
+          <h4>Magalir Urimai Thogai</h4>
+
+          <a href="https://kmut.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- PATTA -->
+      <div class="card">
+        <img src="assets/images/online/oa12.jpg" alt="Patta">
+
+        <div class="overlay">
+          <h4>Patta</h4>
+
+          <a href="https://eservices.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- VILLANGAM -->
+      <div class="card">
+        <img src="assets/images/online/oa13.jpg" alt="Villangam">
+
+        <div class="overlay">
+          <h4>Villangam</h4>
+
+          <a href="https://tnreginet.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- TN Birth - Death certificate -->
+      <div class="card">
+        <img src="assets/images/online/oa33.jpg" alt="Birth certificate">
+
+        <div class="overlay">
+          <h4> TN Birth - Death certificate</h4>
+
+          <a href="https://www.crstn.org/birth_death_tn/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Birth certificate / Nagercoli -->
+      <div class="card">
+        <img src="assets/images/online/oa14.jpg" alt="Birth certificate">
+
+        <div class="overlay">
+          <h4>Birth certificate / Nagercoli</h4>
+
+          <a href="https://nagercoilcorporation.in/birth-certificate-death-certificate/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Birth certificate / Chennai -->
+      <div class="card">
+        <img src="assets/images/online/oa14.jpg" alt="Birth certificate">
+
+        <div class="overlay">
+          <h4>Birth certificate / Chennai</h4>
+
+          <a href="https://chennaicorporation.gov.in/gcc/online-services/birth-death/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- MARRIAGE REGISTRATION -->
+      <div class="card">
+        <img src="assets/images/online/oa15.jpg" alt="Marriage Registration">
+
+        <div class="overlay">
+          <h4>Marriage Registration</h4>
+
+          <a href="https://tnreginet.gov.in/portal/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Death certificate -->
+      <div class="card">
+        <img src="assets/images/online/oa16.jpg" alt="Death certificate">
+
+        <div class="overlay">
+          <h4>Death certificate</h4>
+
+          <a href="https://nagercoilcorporation.in/birth-certificate-death-certificate/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Tn Health Insurance Scheme. -->
+      <div class="card">
+        <img src="assets/images/online/oa31.jpg" alt="Tn Health Insurance Scheme.">
+
+        <div class="overlay">
+          <h4>Tn Health Insurance Scheme.</h4>
+
+          <a href="https://www.cmchistn.com/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- LIC (Life Insurance Corporation) -->
+      <div class="card">
+        <img src="assets/images/online/oa32.jpg" alt="LIC (Life Insurance Corporation)">
+
+        <div class="overlay">
+          <h4>LIC (Life Insurance Corporation)</h4>
+
+          <a href="https://licindia.in/apply-now" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Bike - Car Insurance / ICICI -->
+      <div class="card">
+        <img src="assets/images/online/oa34.jpg" alt="Bike - Car Insurance / ICICI">
+
+        <div class="overlay">
+          <h4>Bike - Car Insurance / ICICI</h4>
+
+          <a href="https://www.icicilombard.com/motor-insurance/two-wheeler-insurance" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Online Complaint Registration -->
+      <div class="card">
+        <img src="assets/images/online/oa17.jpg" alt="Online Complaint Registration">
+
+        <div class="overlay">
+          <h4>Online Complaint Registration</h4>
+
+          <a href="https://www.police.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- widow Pension -->
+      <div class="card">
+        <img src="assets/images/online/oa18.jpg" alt="widow Pension">
+
+        <div class="overlay">
+          <h4>widow Pension</h4>
+
+          <a href="https://www.tnwidowwelfareboard.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Old Age Pension (60+) -->
+      <div class="card">
+        <img src="assets/images/online/oa19.jpg" alt="Old Age Pension (60+)">
+
+        <div class="overlay">
+          <h4>OAP - Old Age Pension (60+)</h4>
+
+          <a href="https://oap.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Canara Bank Death Claim -->
+      <div class="card">
+        <img src="assets/images/online/oa30.jpg" alt="Canara Bank Death Claim">
+
+        <div class="overlay">
+          <h4>OAP - Canara Bank Death Claim</h4>
+
+          <a href="https://csis.canarabank.bank.in/DCS_WEB" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Ayushman Card -->
+      <div class="card">
+        <img src="assets/images/online/oa20.jpg" alt="Ayushman Card">
+
+        <div class="overlay">
+          <h4>Ayushman Card</h4>
+
+          <a href="https://abdm.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- ABHA Card -->
+      <div class="card">
+        <img src="assets/images/online/oa21.jpg" alt="ABHA Card">
+
+        <div class="overlay">
+          <h4>ABHA Card</h4>
+
+          <a href="https://www.tnesevai.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- CGHS/ECHS Cards -->
+      <div class="card">
+        <img src="assets/images/online/oa22.jpg" alt="CGHS/ECHS Cards">
+
+        <div class="overlay">
+          <h4>CGHS/ECHS Cards</h4>
+
+          <a href="https://www.echs.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- e-Shram Card -->
+      <div class="card">
+        <img src="assets/images/online/oa23.jpg" alt="e-Shram Card">
+
+        <div class="overlay">
+          <h4>e-Shram Card</h4>
+
+          <a href="https://register.eshram.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- NREGS Job Card -->
+      <div class="card">
+        <img src="assets/images/online/oa24.jpg" alt="NREGS Job Card">
+
+        <div class="overlay">
+          <h4>NREGS Job Card</h4>
+
+          <a href="https://www.tnesevai.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+      <!-- APAAR ID -->
+      <div class="card">
+        <img src="assets/images/online/oa25.jpg" alt="APAAR ID">
+
+        <div class="overlay">
+          <h4>APAAR ID</h4>
+
+          <a href="https://www.tnesevai.tn.gov.in/" class="btn" target="_blank">
+            Click Me
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

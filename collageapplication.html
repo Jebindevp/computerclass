@@ -1,0 +1,699 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SR INDIAN - College Applications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <style>
+      /* ===== BODY ===== */
+      body {
+        background: #020617;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+      }
+      
+      /* ===== CONTAINER ===== */
+      .container {
+        padding: 30px;
+      }
+      
+      /* ===== TITLE ===== */
+      .title {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+      }
+      
+      /* ===== GRID ===== */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Desktop */
+        gap: 20px;
+      }
+      
+      /* ===== CARD ===== */
+      .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        transition: 0.3s;
+      }
+      
+      .card:hover {
+        transform: translateY(-6px);
+      }
+      
+      /* IMAGE */
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+      
+      .card:hover img {
+        transform: scale(1.1);
+      }
+      
+      /* ===== OVERLAY ===== */
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        opacity: 0;
+        transition: 0.4s;
+        text-align: center;
+      }
+      
+      .card:hover .overlay {
+        opacity: 1;
+      }
+      
+      .overlay h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      
+      /* ===== BUTTON ===== */
+      .btn {
+        background: linear-gradient(135deg, #00f5c4, #3b82f6);
+        color: #000;
+        padding: 7px 14px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .btn:hover {
+        transform: scale(1.1);
+        background: linear-gradient(135deg, #00c9a7, #2563eb);
+      }
+      
+      /* ===== TABLET ===== */
+      @media (max-width: 992px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      /* ===== MOBILE ===== */
+      @media (max-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr); /* 2 cards */
+          gap: 15px;
+        }
+      
+        .card img {
+          height: 140px;
+        }
+      
+        .title {
+          font-size: 22px;
+        }
+      }
+      
+      /* ===== SMALL MOBILE (OPTIONAL) ===== */
+      @media (max-width: 400px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      
+      /* ===== BACK BUTTON ===== */
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #fff;
+        background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+        transition: 0.3s;
+      }
+      
+      .back-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        color: #fff;
+        box-shadow: 0 8px 20px rgba(255, 75, 43, 0.7);
+      }
+      
+      .back-btn i {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 class="title">College & School Applications <br> <br>
+
+      <div class="date-time-box">
+            <span id="live-date"></span>
+            <span id="live-time"></span>
+      </div>
+      </h2>
+
+      <style>
+        #live-date,
+        #live-time{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            gap:8px;
+            font-weight:600;
+        }
+
+        #live-date i{
+            color:#38bdf8;
+        }
+
+        #live-time i{
+            color:#22c55e;
+        }
+      </style>
+
+      <script>
+        function updateDateTime() {
+
+            const now = new Date();
+
+            const date = now.toLocaleDateString('en-IN', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+
+            const time = now.toLocaleTimeString('en-IN', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+
+            document.getElementById('live-date').innerHTML =
+            '<i class="bi bi-calendar-event"></i> ' + date;
+
+            document.getElementById('live-time').innerHTML =
+            '<i class="bi bi-clock-history"></i> ' + time;
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+      </script>
+
+      <!-- BACK BUTTON -->
+      <div style="margin-bottom: 20px;">
+        <a href="services.html" class="back-btn"><i class="bi bi-arrow-left-circle"></i> Back</a>
+      </div>
+
+      <div class="grid">
+
+        <!-- College Admissions -->
+        <div class="card">
+          <img src="assets/images/college/ca36.jpg" alt="College Admissions">
+
+          <div class="overlay">
+            <h4>College Admissions</h4>
+
+            <a href="https://targetstudy.com/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!--  Tamil Nadu B.Ed.  -->
+        <div class="card">
+          <img src="assets/images/college/ca27.jpg" alt=" Tamil Nadu B.Ed. ">
+
+          <div class="overlay">
+            <h4> Tamil Nadu B.Ed. </h4>
+
+            <a href="https://www.tnteu.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Manonmaniam Sundaranar University -->
+        <div class="card">
+          <img src="assets/images/college/ca1.jpg" alt="Manonmaniam Sundaranar University">
+
+          <div class="overlay">
+            <h4>Manonmaniam Sundaranar University</h4>
+
+            <a href="https://www.msuniv.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Anna University -->
+        <div class="card">
+          <img src="assets/images/college/ca2.jpg" alt="Anna University">
+
+          <div class="overlay">
+            <h4>Anna University</h4>
+
+            <a href="https://www.annauniv.edu/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Annamalai University -->
+        <div class="card">
+          <img src="assets/images/college/ca9.jpg" alt="Annamalai University">
+
+          <div class="overlay">
+            <h4>Annamalai University</h4>
+
+            <a href="https://www.annamalaiuniversity.ac.in/adm/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Amrita Vishwa Vidyapeetham University   -->
+        <div class="card">
+          <img src="assets/images/college/ca16.jpg" alt="Amrita Vishwa Vidyapeetham University  ">
+
+          <div class="overlay">
+            <h4>Amrita Vishwa Vidyapeetham University  </h4>
+
+            <a href="https://applyug.amrita.edu/home" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Noorul Islam University   -->
+        <div class="card">
+          <img src="assets/images/college/ca17.jpg" alt="Noorul Islam University  ">
+
+          <div class="overlay">
+            <h4>Noorul Islam University  </h4>
+
+            <a href="https://www.niuniv.com/admissionprocess.php" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- PARAMEDICAL -->
+        <div class="card">
+          <img src="assets/images/college/ca3.jpg" alt="PARAMEDICAL">
+
+          <div class="overlay">
+            <h4>PARAMEDICAL</h4>
+
+            <a href="https://tnmedicalselection.net/Courses.aspx?cid=4" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Tamilnadu Engineering Admissions [TNEA] counselling -->
+        <div class="card">
+          <img src="assets/images/college/ca34.jpg" alt="Tamilnadu Engineering Admissions [TNEA] counselling">
+
+          <div class="overlay">
+            <h4>Tamilnadu Engineering Admissions [TNEA] counselling</h4>
+
+            <a href="https://www.tneaonline.org/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Tamilnadu Arts & Science counselling -->
+        <div class="card">
+          <img src="assets/images/college/ca35.jpg" alt="Tamilnadu Arts & Science counselling">
+
+          <div class="overlay">
+            <h4>Tamilnadu Arts & Science counselling</h4>
+
+            <a href="https://www.tngasa.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Bharathidasan University   -->
+        <div class="card">
+          <img src="assets/images/college/ca18.jpg" alt="Bharathidasan University  ">
+
+          <div class="overlay">
+            <h4>Bharathidasan University  </h4>
+
+            <a href="https://www.bduedu.in/bharathidasan-university-online-main-program-ct?&source=BDU&media=IGAW-Search&campaign=s-brnd-d-tcpa&utm_source=Google&utm_medium=Search&utm_campaign=12631557116&utm_adgroup=121344102898&utm_term=Distance%20education%20bharathidasan%20university&utm_device=c&matchtype=b&city=9075260&state=9040217&gad_source=1&gad_campaignid=12631557116&gbraid=0AAAAABfbDVaezaMY34isX25_ooaK_uc4v&gclid=Cj0KCQjwornRBhCrARIsAON5exGxURuyKDN5QXGnvITMI5TxhHR0WLD4U-s0pyHpCLBgrhCyWAUtuKkaAgubEALw_wcB" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Periyar University   -->
+        <div class="card">
+          <img src="assets/images/college/ca19.jpg" alt="Periyar University  ">
+
+          <div class="overlay">
+            <h4>Periyar University  </h4>
+
+            <a href="https://www.periyaruniversity.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Thiruvalluvar University   -->
+        <div class="card">
+          <img src="assets/images/college/ca20.jpg" alt="Thiruvalluvar University  ">
+
+          <div class="overlay">
+            <h4>Thiruvalluvar University  </h4>
+
+            <a href="https://www.tvu.edu.in/admission-2025-2026/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- ALAGAPPA UNIVERSITY   -->
+        <div class="card">
+          <img src="assets/images/college/ca21.jpg" alt="ALAGAPPA UNIVERSITY  ">
+
+          <div class="overlay">
+            <h4>ALAGAPPA UNIVERSITY  </h4>
+
+            <a href="https://admissions.alagappauniversity.ac.in/DepartmentsAdmission/modules/init/applyDashboard.php" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Indira Gandhi University Haryana -->
+        <div class="card">
+          <img src="assets/images/college/ca4.jpg" alt="Indira Gandhi University Haryana">
+
+          <div class="overlay">
+            <h4>Indira Gandhi University Haryana</h4>
+
+            <a href="https://igu1.ucanapply.com/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Indian Institute of Technology Madras -->
+        <div class="card">
+          <img src="assets/images/college/ca5.jpg" alt="Indian Institute of Technology Madras">
+
+          <div class="overlay">
+            <h4>Indian Institute of Technology Madras</h4>
+
+            <a href="https://www.iitm.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- National Institute of Technology, Tiruchirappalli -->
+        <div class="card">
+          <img src="assets/images/college/ca6.jpg" alt="National Institute of Technology, Tiruchirappalli">
+
+          <div class="overlay">
+            <h4>National Institute of Technology, Tiruchirappalli</h4>
+
+            <a href="https://www.iitm.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Central University of Tamil Nadu (CUTN) -->
+        <div class="card">
+          <img src="assets/images/college/ca7.jpg" alt="Central University of Tamil Nadu (CUTN)">
+
+          <div class="overlay">
+            <h4>Central University of Tamil Nadu (CUTN)</h4>
+
+            <a href="https://cutn.ac.in/admissions/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- University of Madras -->
+        <div class="card">
+          <img src="assets/images/college/ca8.jpg" alt="University of Madras">
+
+          <div class="overlay">
+            <h4>University of Madras</h4>
+
+            <a href="https://www.unom.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Bharathiar University  -->
+        <div class="card">
+          <img src="assets/images/college/ca10.jpg" alt="Bharathiar University ">
+
+          <div class="overlay">
+            <h4>Bharathiar University </h4>
+
+            <a href="https://fms.b-u.ac.in/admission/#stab1" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Madurai Kamaraj University (MKU)  -->
+        <div class="card">
+          <img src="assets/images/college/ca11.jpg" alt="Madurai Kamaraj University (MKU) ">
+
+          <div class="overlay">
+            <h4>Madurai Kamaraj University (MKU) </h4>
+
+            <a href="https://mkuniversityadmission.samarth.edu.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- CMC Vellore  -->
+        <div class="card">
+          <img src="assets/images/college/ca31.jpg" alt="CMC Vellore ">
+
+          <div class="overlay">
+            <h4>CMC Vellore </h4>
+
+            <a href="https://admissions.cmcvellore.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Vellore University (VIT)  -->
+        <div class="card">
+          <img src="assets/images/college/ca12.jpg" alt="Vellore University (VIT) ">
+
+          <div class="overlay">
+            <h4>Vellore University (VIT) </h4>
+
+            <a href="https://viteee.vit.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Sastra University   -->
+        <div class="card">
+          <img src="assets/images/college/ca13.jpg" alt="Sastra University  ">
+
+          <div class="overlay">
+            <h4>Sastra University  </h4>
+
+            <a href="https://webstream.sastra.edu/sastraonline/application/loginManager/applicantInitialPage.jsp" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- ISI University   -->
+        <div class="card">
+          <img src="assets/images/college/ca14.jpg" alt="ISI University  ">
+
+          <div class="overlay">
+            <h4>ISI University  </h4>
+
+            <a href="https://admission.isical.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- SRM University   -->
+        <div class="card">
+          <img src="assets/images/college/ca15.jpg" alt="SRM University  ">
+
+          <div class="overlay">
+            <h4>SRM University  </h4>
+
+            <a href="https://applications.srmist.edu.in/btech?utm_source=Esquared&utm_medium=Google_Search&utm_campaign=SRMJEEE_Search_2026&utm_adgroupid=189140084337&utm_campaignid=23443227590&utm_keyword=srmjee&utm_device=c&utm_network=g&utm_matchtype=b&gad_source=1&gad_campaignid=23443227590&gbraid=0AAAAApHBOuUApRbXG-WnhSE3DXemsk46Q&gclid=Cj0KCQjwornRBhCrARIsAON5exHAG0KpdY3pHz4fPphkghrqY6nAb78xQcxkPp__M4ssC1eI4_GUmPIaAsVUEALw_wcB" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Loyola University   -->
+        <div class="card">
+          <img src="assets/images/college/ca32.jpg" alt="Loyola University  ">
+
+          <div class="overlay">
+            <h4>Loyola University  </h4>
+
+            <a href="https://www.loyolacollege.edu.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- RTE Admission   -->
+        <div class="card">
+          <img src="assets/images/college/ca33.jpg" alt="RTE Admission  ">
+
+          <div class="overlay">
+            <h4>RTE Admission  </h4>
+
+            <a href="https://school.careers360.com/articles/rte-tamil-nadu-admission-2026-27-apply-online" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Tamil Nadu Dr. M.G.R. Medical University   -->
+        <div class="card">
+          <img src="assets/images/college/ca22.jpg" alt="Tamil Nadu Dr. M.G.R. Medical University  ">
+
+          <div class="overlay">
+            <h4>Tamil Nadu Dr. M.G.R. Medical University  </h4>
+
+            <a href="https://tnmgrmuonline.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!--  Tamil Nadu Dr.Ambedkar Law University  -->
+        <div class="card">
+          <img src="assets/images/college/ca23.jpg" alt=" Tamil Nadu Dr.Ambedkar Law University ">
+
+          <div class="overlay">
+            <h4> Tamil Nadu Dr.Ambedkar Law University </h4>
+
+            <a href="https://www.tndalu.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!--  Tamil Nadu Agricultural B.Sc  -->
+        <div class="card">
+          <img src="assets/images/college/ca24.jpg" alt=" Tamil Nadu Agricultural B.Sc ">
+
+          <div class="overlay">
+            <h4> Tamil Nadu Agricultural B.Sc </h4>
+
+            <a href="https://tnau.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!--  Tamil Nadu VETERINARY AND ANIMAL University  -->
+        <div class="card">
+          <img src="assets/images/college/ca25.jpg" alt=" Tamil Nadu VETERINARY AND ANIMAL University ">
+
+          <div class="overlay">
+            <h4> Tamil Nadu VETERINARY AND ANIMAL University </h4>
+
+            <a href="https://www.tanuvas.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!--  Tamil Nadu Dr. J. Jayalalithaa Fisheries University  -->
+        <div class="card">
+          <img src="assets/images/college/ca26.jpg" alt=" Tamil Nadu Dr. J. Jayalalithaa Fisheries University ">
+
+          <div class="overlay">
+            <h4> Tamil Nadu Dr. J. Jayalalithaa Fisheries University </h4>
+
+            <a href="https://admission.tnjfu.ac.in/apply/select-category" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!--  Mother Teresa Women's University (Kodaikanal)  -->
+        <div class="card">
+          <img src="assets/images/college/ca28.jpg" alt=" Mother Teresa Women's University (Kodaikanal) ">
+
+          <div class="overlay">
+            <h4> Mother Teresa Women's University (Kodaikanal) </h4>
+
+            <a href="https://omis.motherteresawomenuniv.ac.in/ud_applications/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!--  Tamil Nadu Dr. J Jayalalithaa Music and Fine Arts University (TNJMFAU)  -->
+        <div class="card">
+          <img src="assets/images/college/ca29.jpg" alt=" Tamil Nadu Dr. J Jayalalithaa Music and Fine Arts University (TNJMFAU) ">
+
+          <div class="overlay">
+            <h4> Tamil Nadu Dr. J Jayalalithaa Music and Fine Arts University (TNJMFAU) </h4>
+
+            <a href="https://tnjjmfau.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+        <!--  Tamil Nadu Open University  -->
+        <div class="card">
+          <img src="assets/images/college/ca30.jpg" alt=" Tamil Nadu Open University ">
+
+          <div class="overlay">
+            <h4> Tamil Nadu Open University </h4>
+
+            <a href="https://tnou.ac.in/" class="btn" target="_blank">
+              Click Me
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

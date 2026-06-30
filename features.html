@@ -1,0 +1,3036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from up2client.com/envato/ciri-ai/html/main/MultiPage-CiriAI/features.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Apr 2025 07:07:35 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo2.png">
+    <link rel="stylesheet" href="assets/css/swap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media_query.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+
+
+    <style>
+        /* Full Screen Loader */
+        .page-loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Circle Loader */
+        .circle-loader {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Rotating Border Animation */
+        .circle-loader::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top: 5px solid #00f7ff;
+            border-right: 5px solid #00f7ff;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Glow Effect */
+        .circle-loader::after {
+            content: '';
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 247, 255, 0.2), transparent);
+        }
+
+        /* Logo Text */
+        .logo-text {
+            position: relative;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 2;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Spin Animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Text Pulse */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* 📱 Responsive Design */
+        @media (max-width: 768px) {
+            .circle-loader {
+                width: 90px;
+                height: 90px;
+            }
+
+            .logo-text {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .circle-loader {
+                width: 70px;
+                height: 70px;
+            }
+
+            .logo-text {
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .page-loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Circle Loader */
+        .circle-loader {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle-loader::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top: 5px solid #00f7ff;
+            border-right: 5px solid #00f7ff;
+            animation: spin 1s linear infinite;
+        }
+
+        .circle-loader::after {
+            content: '';
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 247, 255, 0.2), transparent);
+        }
+
+        .logo-text {
+            position: relative;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .circle-loader {
+                width: 90px;
+                height: 90px;
+            }
+
+            .logo-text {
+                font-size: 13px;
+            }
+        }
+
+
+        /* Section Background */
+        .stats-section {
+            background: #0a0a0a;
+            padding: 60px 20px;
+        }
+
+        /* Grid Layout */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Card Design */
+        .card {
+            background: #111;
+            border-radius: 15px;
+            text-align: center;
+            padding: 30px 20px;
+            transition: 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+        }
+
+        /* Icon */
+        .card i {
+            font-size: 45px;
+            color: #00f7ff;
+            margin-bottom: 15px;
+        }
+
+        /* Heading */
+        .card h5 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        /* Sub Text */
+        .card p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Hover Effect */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
+        }
+
+        /* 📱 Responsive */
+        @media (max-width: 992px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* ================= CONTAINER ================= */
+        .hometags-main {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        /* Title */
+        .popTg {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* ================= TAG BUTTON ================= */
+        .hometags {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 8px;
+            padding: 12px 22px;
+
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+
+            border-radius: 0;
+            /* ❌ No rounded */
+            z-index: 1;
+            overflow: hidden;
+
+            letter-spacing: 0.5px;
+            transition: 0.3s ease;
+        }
+
+        /* Gradient Border */
+        .hometags::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            /* Border thickness */
+
+            background: linear-gradient(90deg, #00f7ff, #58c3ed, #00f7ff);
+
+            -webkit-mask:
+                linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            z-index: -1;
+        }
+
+        /* Inner Background */
+        .hometags::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #0a0a0a;
+            z-index: -2;
+        }
+
+        /* ================= HOVER ================= */
+        .hometags:hover {
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        /* Fill effect on hover */
+        .hometags:hover::after {
+            background: linear-gradient(90deg, #00f7ff, #93ccef);
+        }
+
+        /* Glow */
+        .hometags:hover::before {
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.6);
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .hometags {
+                padding: 10px 18px;
+                font-size: 13px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .hometags {
+                display: block;
+                width: 90%;
+                margin: 10px auto;
+                text-align: center;
+            }
+
+            .popTg {
+                font-size: 20px;
+            }
+        }
+
+
+        /* Container */
+        .logos {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        /* Slide */
+        .logos-slide {
+            display: inline-block;
+            animation: scroll-left 20s linear infinite;
+        }
+
+        /* Reverse direction */
+        .logos-slide.rtl {
+            animation: scroll-right 20s linear infinite;
+        }
+
+        /* Content */
+        .marquee__content {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Text Box */
+        .marquee-text {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #111;
+            color: #00f7ff;
+            border: 1px solid #00f7ff;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Hover Effect */
+        .marquee-text:hover {
+            background: #00f7ff;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        /* Animation */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .marquee-text {
+                font-size: 12px;
+                padding: 8px 14px;
+            }
+        }
+
+
+        .map-container {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .map-container iframe {
+                height: 250px;
+            }
+        }
+
+
+
+        .social-contact {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        /* Colors */
+        .fb {
+            background: #1877f2;
+        }
+
+        .wa {
+            background: #25d366;
+        }
+
+        .gm {
+            background: #ea4335;
+        }
+
+        /* Hover Effect */
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ICON BOX */
+        .features-cir {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #fff;
+            margin: auto;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        /* GLOW EFFECT COLORS */
+        .icon-glow.call {
+            box-shadow: 0 0 15px #00f7ff;
+        }
+
+        .icon-glow.email {
+            box-shadow: 0 0 15px #ff00c8;
+        }
+
+        .icon-glow.location {
+            box-shadow: 0 0 15px #00ff88;
+        }
+
+        /* HOVER EFFECT */
+        .features-cir:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #fff;
+        }
+
+        /* TEXT CENTER */
+        .gendseratio,
+        .eugiat,
+        .numb-con {
+            text-align: center;
+            display: block;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .features-cir {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+        }
+
+
+        /* SECTION BACKGROUND */
+        .subs-sec {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* TEXT */
+        .sec-heding {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .sec-heding span {
+            color: #00eaff;
+        }
+
+        .dui {
+            margin: 15px 0 25px;
+            opacity: 0.8;
+        }
+
+        /* INPUT + BUTTON */
+        .sub-scjsd-inp-main {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .sub-scjsd-inp-main input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 18px;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        /* BUTTON */
+        .subscribeBtn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: #00eaff;
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .subscribeBtn:hover {
+            background: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* CHECKBOX */
+        .footer-checkbox-sec {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .footer-checkbox-input {
+            margin-right: 8px;
+        }
+
+        /* IMAGE WRAPPER */
+        .image-wrapper {
+            position: relative;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        /* MAIN IMAGE */
+        .img-main {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        /* OVERLAY IMAGE */
+        .img-overlay {
+            position: absolute;
+            bottom: -40px;
+            right: -40px;
+            width: 60%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* GLOW EFFECT */
+        .img-overlay:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .subs-sec {
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            .sub-scjsd-inp-main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sub-scjsd-inp-main input,
+            .subscribeBtn {
+                width: 100%;
+            }
+
+            .image-wrapper {
+                margin-top: 40px;
+            }
+
+            .img-overlay {
+                position: static;
+                width: 100%;
+                height: 180px;
+                margin-top: 15px;
+                border: none;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+            .sec-heding {
+                font-size: 26px;
+            }
+
+            .img-main {
+                height: 250px;
+            }
+
+            .img-overlay {
+                height: 150px;
+            }
+        }
+
+
+
+
+        /* SECTION */
+        .courses-sec {
+            padding: 80px 0;
+
+            color: #fff;
+        }
+
+        /* HEADING */
+        .sec-heding {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .sec-heding span {
+            color: #00eaff;
+        }
+
+        /* COURSE BOX */
+        .course-box {
+            background: #111827;
+            padding: 30px 15px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* ICON */
+        .course-box i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #00eaff;
+        }
+
+        /* TITLE */
+        .course-box h3 {
+            font-size: 18px;
+        }
+
+        /* HOVER */
+        .course-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.4);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .course-box {
+                padding: 25px 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .sec-heding {
+                font-size: 26px;
+            }
+
+            .course-box i {
+                font-size: 30px;
+            }
+
+            .course-box h3 {
+                font-size: 16px;
+            }
+        }
+
+
+
+        /* SECTION */
+        .courses-sec {
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        /* VIDEO BACKGROUND */
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        /* OVERLAY */
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(2, 6, 23, 0.75);
+            z-index: -1;
+        }
+
+        /* COURSE BOX */
+        .course-box {
+            text-align: center;
+            padding: 25px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+            margin-bottom: 20px;
+        }
+
+        /* ICON */
+        .course-box i {
+            font-size: 35px;
+            color: #00eaff;
+            margin-bottom: 10px;
+        }
+
+        /* HOVER EFFECT */
+        .course-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 234, 255, 0.3);
+        }
+
+        /* TEXT */
+        .course-box h3 {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .bg-video {
+                height: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ====================================== Loader ===================================== -->
+    <div class="page-loader" id="loader">
+        <div class="circle-loader">
+            <span class="logo-text">SRINDIAN</span>
+        </div>
+    </div>
+
+    <!-- ====================================== Header ===================================== -->
+    <div class="overlay" onclick="toggleMenu()"></div>
+    <header id="top-navbar" class="top-navbar">
+        <div class="container">
+            <nav>
+
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <img src="assets/images/SRI LOGO.png" alt="menu">
+                </div>
+                <div class="nav-links-mn">
+                    <ul class="nav-links">
+                        <!-- <li class="d-flex justify-content-center">
+                     <a href="services.html" class="side-menu-logo">
+                        <img src="assets/images/SRI LOGO.png" alt="logo" height="140px" style="border-radius: 50%;">
+                     </a>
+                  </li> -->
+                        <img src="assets/images/SRI LOGO.png" alt="logo" height="100px" style="border-radius: 50%;">
+                        <li><a class="a-link" href="index.html">Home</a></li>
+                        <li><a class="a-link" href="features.html">Course</a></li>
+                        <li><a class="a-link" href="about.html">About</a></li>
+                        <li><a class="a-link" href="pricing.html">Pricing</a></li>
+                        <li><a class="a-link" href="blog.html">Blog</a></li>
+                        <li><a class="a-link" href="team.html">Team</a></li>
+                        <li><a class="a-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="header-buttons-main">
+                        <a href="#" class="button2">
+                            <span>Join Now</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====================================== Section Three ===================================== -->
+
+    <section class="section-three position-relative pt-0">
+
+        <div class="container">
+            <h2 class="ering reveal-text">“We are dedicated to empowering students with practical skills in computers
+                and
+                typewriting, helping them build successful careers and achieve a brighter future.”</h2>
+            <div class="community-btn-main">
+                <a href="#subscribe" class="button"> Join Now
+                    <span class="hoverEffect">
+                        <span></span>
+                    </span>
+                </a>
+            </div>
+            <p class="sub-heding glob pt-0">“1,000+ students have successfully studied and completed their courses
+                with us.”</p>
+        </div>
+
+        <div class="logos logos1" style="background-color: #000;">
+            <div class="logos-slide ltr">
+                <div class="marquee__content">
+
+                    <div class="marquee-text">Python</div>
+                    <div class="marquee-text">Django</div>
+                    <div class="marquee-text">Java</div>
+                    <div class="marquee-text">JavaScript</div>
+                    <div class="marquee-text">HTML & CSS</div>
+                    <div class="marquee-text">Bootstrap</div>
+                    <div class="marquee-text">React</div>
+                    <div class="marquee-text">MS Office</div>
+                    <div class="marquee-text">Tally</div>
+                    <div class="marquee-text">C & C++</div>
+                    <div class="marquee-text">DCA & DTP</div>
+                    <div class="marquee-text">Typewriting</div>
+                    <div class="marquee-text">Steno</div>
+                    <div></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="logos">
+            <div class="logos-slide rtl">
+                <div class="marquee__content">
+
+                    <div class="marquee-text">Python</div>
+                    <div class="marquee-text">Django</div>
+                    <div class="marquee-text">Java</div>
+                    <div class="marquee-text">JavaScript</div>
+                    <div class="marquee-text">HTML & CSS</div>
+                    <div class="marquee-text">Bootstrap</div>
+                    <div class="marquee-text">React</div>
+                    <div class="marquee-text">MS Office</div>
+                    <div class="marquee-text">Tally</div>
+                    <div class="marquee-text">C & C++</div>
+                    <div class="marquee-text">DCA & DTP</div>
+                    <div class="marquee-text">Typewriting</div>
+                    <div class="marquee-text">Steno</div>
+                    <div></div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="course-section">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="card">
+                        <img src="assets/images/slider/sl1.jpg" alt="" />
+                        <div class="overlay">Excel Course</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl2.jpg" alt="" />
+                        <div class="overlay">FULLSTACK DEVELOPMENT</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl3.jpg" alt="" />
+                        <div class="overlay">WEB DESIGN</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl4.jpg" alt="" />
+                        <div class="overlay">PYTHON</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl5.jpg" alt="" />
+                        <div class="overlay">Programming</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl6.jpg" alt="" />
+                        <div class="overlay">TALLY</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl7.jpg" alt="" />
+                        <div class="overlay">Ms-Office</div>
+                    </div>
+
+                    <!-- DUPLICATE FOR AUTO SCROLL -->
+                    <div class="card">
+                        <img src="assets/images/slider/sl1.jpg" alt="" />
+                        <div class="overlay">Excel Course</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl7.jpg" alt="" />
+                        <div class="overlay">MS Office</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                background: #0a0f1f;
+            }
+
+            /* SECTION */
+            .course-section {
+                padding: 40px 20px;
+                text-align: center;
+            }
+
+            .title {
+                color: #fff;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+
+            /* SLIDER */
+            .slider {
+                overflow: hidden;
+                position: relative;
+            }
+
+            /* TRACK */
+            .slide-track {
+                display: flex;
+                gap: 20px;
+                animation: scroll 25s linear infinite;
+            }
+
+            /* CARD */
+            .card {
+                min-width: 250px;
+                height: 300px;
+                border-radius: 15px;
+                overflow: hidden;
+                position: relative;
+                flex-shrink: 0;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+
+            .card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* HOVER EFFECT */
+            .card:hover {
+                transform: scale(1.08);
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 15px;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            /* AUTO SCROLL */
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            /* RESPONSIVE */
+            @media (max-width: 992px) {
+                .card {
+                    min-width: 200px;
+                    height: 250px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .card {
+                    min-width: 160px;
+                    height: 220px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .card {
+                    min-width: 130px;
+                    height: 180px;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- ====================================== Section Two ===================================== -->
+
+    <div class="container position-relative">
+        <!-- MAIN HEADING -->
+        <div class="text-center mb-5">
+            <h1 class="main-heading">Explore Our <span>Courses</span></h1>
+
+            <p class="sub-text">Professional Training • Vacation Courses • Children Courses</p>
+        </div>
+
+        <!-- ================= OUR COURSES ================= -->
+
+        <div class="course-title">
+            <h2>Our Courses</h2>
+        </div>
+
+        <div class="row g-4">
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa1.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Web Development</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#webModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa2.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Half Stack Development</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#halfStackModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa3.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Python Programming</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#pythonModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa4.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Django Full Stack Development</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#djangoModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa5.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Tally</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#tallyModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa6.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>MS Office</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#ms-officeModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa7.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Java</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#JavaModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa8.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Typewriting</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#typewritingModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa9.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>C, C++</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#c-cppModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa10.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Shorthand - ( steno )</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#shorthandModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa11.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Spoken English</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#spokenEnglishModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa12.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Tailoring</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#tailoringModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= VACATION COURSES ================= -->
+
+        <div class="course-title mt-5">
+            <h2>Vacation Courses</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa1.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Web Development</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#webModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa2.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Half Stack Development</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#halfStackModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa3.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Python Programming</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#pythonModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa4.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Django Full Stack Development</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#djangoModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa7.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Java</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#JavaModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa13.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>JavaScript</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#JavaScriptModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa9.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>C, C++</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#c-cppModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa5.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Tally</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#tallyModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa6.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>MS Office</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#ms-officeModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa8.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Typewriting</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#typewritingModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa10.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Shorthand - <br />( steno )</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#shorthandModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa11.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Spoken English</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#spokenEnglishModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= CHILDREN COURSES ================= -->
+
+        <div class="course-title mt-5">
+            <h2>Children Courses</h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa14.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Drawing</h3>
+
+                        <button class="details-btn">View Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa15.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Music</h3>
+
+                        <button class="details-btn">View Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa16.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Hindi</h3>
+
+                        <button class="details-btn">View Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa11.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Spoken English</h3>
+
+                        <button class="details-btn">View Subjects</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-title mt-5">
+            <h2> MS UNIVERSITY (Distance & Online Courses)</h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa17.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Under Graduate / Post Graduate</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#ugpgModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa18.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Certificate Courses</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#certificateModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa19.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Online Courses (UG / PG)</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#onlineModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="course-card">
+                    <img src="assets/images/course/aa20.jpg" alt="" />
+
+                    <div class="course-content">
+                        <h3>Diploma Courses</h3>
+
+                        <button class="details-btn" data-bs-toggle="modal" data-bs-target="#diplomaModal">View
+                            Subjects</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MODALS ================= -->
+
+    <!-- WEB MODAL -->
+    <div class="modal fade" id="webModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Web Development Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Bootstrap</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HALF STACK MODAL -->
+    <div class="modal fade" id="halfStackModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Half Stack Development Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Bootstrap</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PYTHON MODAL -->
+    <div class="modal fade" id="pythonModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Python Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>Python Basics</li>
+                        <li>Functions</li>
+                        <li>OOP</li>
+                        <li>File Handling</li>
+                        <li>Projects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DJANGO MODAL -->
+    <div class="modal fade" id="djangoModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Django Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>Django Setup</li>
+                        <li>Models</li>
+                        <li>Views & URLs</li>
+                        <li>Templates</li>
+                        <li>Authentication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TALLY MODAL -->
+    <div class="modal fade" id="tallyModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Tally Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>Accounting</li>
+                        <li>GST</li>
+                        <li>Payroll</li>
+                        <li>Inventory</li>
+                        <li>Reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MS OFFICE MODAL -->
+    <div class="modal fade" id="ms-officeModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">MS Office Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>MS Word</li>
+                        <li>MS Excel</li>
+                        <li>MS PowerPoint</li>
+                        <li>Typing Practice</li>
+                        <li>Document Formatting</li>
+                        <li>Spreadsheet Calculations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVA MODAL -->
+    <div class="modal fade" id="JavaModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Java Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>Java Basics</li>
+                        <li>Variables & Data Types</li>
+                        <li>Operators</li>
+                        <li>Conditional Statements</li>
+                        <li>Loops</li>
+                        <li>Arrays</li>
+                        <li>Methods & Functions</li>
+                        <li>Object Oriented Programming (OOP)</li>
+                        <li>Classes & Objects</li>
+                        <li>Inheritance</li>
+                        <li>Polymorphism</li>
+                        <li>Exception Handling</li>
+                        <li>File Handling</li>
+                        <li>Collections Framework</li>
+                        <li>Mini Projects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT MODAL -->
+    <div class="modal fade" id="JavaScriptModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">JavaScript Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>JavaScript Basics</li>
+                        <li>Variables & Data Types</li>
+                        <li>Operators</li>
+                        <li>Conditional Statements</li>
+                        <li>Loops</li>
+                        <li>Arrays</li>
+                        <li>Methods & Functions</li>
+
+                        <li>Mini Projects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TYPING MODAL -->
+    <div class="modal fade" id="typewritingModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Typewriting Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>English Beginner</li>
+                        <li>Tamil Beginner</li>
+                        <li>Keyboard Finger Practice</li>
+                        <li>English Intermediate</li>
+                        <li>Tamil Intermediate</li>
+                        <li>Tamil Advanced</li>
+                        <li>English Advanced</li>
+                        <li>Speed Test Practice</li>
+                        <li>Government Exam Typing Format</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- C, C++ MODAL -->
+    <div class="modal fade" id="c-cppModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">C, C++ Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>C Fundamentals</li>
+                        <li>C++ Fundamentals</li>
+                        <li>Variables & Data Types</li>
+                        <li>Operators</li>
+                        <li>Control Structures</li>
+                        <li>Functions</li>
+                        <li>Arrays & Strings</li>
+                        <li>Pointers</li>
+                        <li>Structures & Unions</li>
+                        <li>File Handling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHORTHAND MODAL -->
+    <div class="modal fade" id="shorthandModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Shorthand Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>English Shorthand</li>
+                        <li>Tamil Shorthand</li>
+                        <li>Basic Steno Writing</li>
+                        <li>Letter & Word Practice</li>
+                        <li>Sentence Writing</li>
+                        <li>Speed Practice</li>
+                        <li>Listening Practice</li>
+                        <li>Dictation Training</li>
+                        <li>Typing & Transcription</li>
+                        <li>Government Exam Preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spoken English MODAL -->
+    <div class="modal fade" id="spokenEnglishModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Spoken English Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>Speaking Practice</li>
+                        <li>Listening Comprehension</li>
+                        <li>Grammar & Vocabulary</li>
+                        <li>Conversation Skills</li>
+                        <li>Public Speaking</li>
+                        <li>Interview Preparation</li>
+                        <li>Accent Reduction</li>
+                        <li>Pronunciation Exercises</li>
+                        <li>Role Play Scenarios</li>
+                        <li>Group Discussions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tailoring MODAL -->
+    <div class="modal fade" id="tailoringModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Tailoring Subjects</h5>
+
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <ul>
+                        <li>Basic Tailoring</li>
+                        <li>Hand Stitching</li>
+                        <li>Machine Stitching</li>
+                        <li>Measurement Taking</li>
+                        <li>Cutting Techniques</li>
+                        <li>Blouse Stitching</li>
+                        <li>Churidar Stitching</li>
+                        <li>Children Dress Designing</li>
+                        <li>Embroidery Basics</li>
+                        <li>Fashion Designing Basics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UG/PG MODAL -->
+    <div class="modal fade" id="ugpgModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Under Graduate / Post Graduate Courses</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li> Bachelor of Arts (Tamil , English , History , Economics) .</li>
+                        <li> Master of Arts (Tamil , English , History , Economics) .</li>
+                        <li> Bachelor of Commerce .</li>
+                        <li> Master of Commerce .</li>
+                        <li> Bachelor of Business Administration .</li>
+                        <li> M A (Criminology and Police Science) .</li>
+                        <li> M A (Journalism and Mass Communication) .</li>
+                        <li> Bachelor of Science (Physics , Chemistry , Mathematics) .</li>
+                        <li> Master of Science (Physics , Chemistry , Mathematics) .</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICATE MODAL -->
+    <div class="modal fade" id="certificateModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Certificate Courses</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Certificate in Library and Information Science.(6 months) .</li>
+                        <li>Certificate in Yoga for Human Excellence.(6 months) .</li>
+                        <li>Post Graduate Diploma in Computer Applications.(1 year) .</li>
+                        <li>Diploma in Yoga for Human Excellence.(1 year) .</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ONLINE MODAL -->
+    <div class="modal fade" id="onlineModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Online Courses (UG / PG)</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Bachelor of Arts.(English).</li>
+                        <li>Master Of Arts.(Tamil , English , History , Economics).</li>
+                        <li>Bachelor Of Commerce.</li>
+                        <li>Master Of Commerce.</li>
+                        <li>M A (Journalism and Mass Communication).</li>
+                        <li>Bachelor Of Business Administration.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIPLOMA MODAL -->
+    <div class="modal fade" id="diplomaModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Diploma Courses</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Information Technology .</li>
+                        <li>Software Engineering .</li>
+                        <li>Fashion Design .</li>
+                        <li>Computer Hardware & Networking .</li>
+                        <li>Airline & Travel Management .</li>
+                        <li>Human Resource Management .</li>
+                        <li>Computerized Accounting & Finance .</li>
+                        <li>Interior Design .</li>
+                        <li>Hospital Records Management .</li>
+                        <li>Clincal Research .</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .courses-section {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        /* VIDEO */
+        .bg-video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            z-index: -2;
+        }
+
+        /* OVERLAY */
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.82);
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* MAIN HEADING */
+        .main-heading {
+            font-size: 55px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .main-heading span {
+            color: #00ffd5;
+        }
+
+        .sub-text {
+            color: #d8d8d8;
+            font-size: 18px;
+        }
+
+        /* TITLE */
+        .course-title h2 {
+            color: #00ffd5;
+            margin-bottom: 30px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .course-title h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60%;
+            height: 3px;
+            background: #00ffd5;
+        }
+
+        /* CARD */
+        .course-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            transition: 0.5s;
+            height: 280px;
+            cursor: pointer;
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.6s;
+        }
+
+        /* CONTENT */
+        .course-content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.2));
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .course-content h3 {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        /* BUTTON */
+        .details-btn {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: #00ffd5;
+            color: #000;
+            font-weight: 700;
+            transition: 0.4s;
+        }
+
+        .details-btn:hover {
+            background: #fff;
+            transform: scale(1.1);
+        }
+
+        /* HOVER EFFECT */
+        .course-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 40px rgba(0, 255, 213, 0.4);
+        }
+
+        .course-card:hover img {
+            transform: scale(1.15) rotate(2deg);
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 255, 213, 0.25), rgba(0, 123, 255, 0.25));
+            opacity: 0;
+            transition: 0.5s;
+            z-index: 1;
+        }
+
+        .course-card:hover::before {
+            opacity: 1;
+        }
+
+        .course-content {
+            z-index: 2;
+        }
+
+        /* MODAL */
+        .custom-modal {
+            background: #111;
+            width: 400px;
+            color: #fff;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-body ul {
+            padding-left: 20px;
+        }
+
+        .modal-body li {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 992px) {
+            .main-heading {
+                font-size: 42px;
+            }
+
+            .course-card {
+                height: 240px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 34px;
+            }
+
+            .sub-text {
+                font-size: 15px;
+            }
+
+            .course-card {
+                height: 220px;
+            }
+
+            .course-content h3 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .courses-section {
+                padding: 60px 0;
+            }
+
+            .main-heading {
+                font-size: 28px;
+            }
+
+            .course-card {
+                height: 190px;
+            }
+
+            .course-content {
+                padding: 12px;
+            }
+
+            .course-content h3 {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+
+            .details-btn {
+                padding: 7px 14px;
+                font-size: 12px;
+            }
+        }
+    </style>
+
+    <!-- ====================================== Section Five ===================================== -->
+    <section class="section-five pt-0">
+        <div class="logos sldkjf">
+            <div class="logos-slide ltr">
+                <div class="marquee__content pt-0">
+                    <div class="vis-tex vis-tex1">
+                        <img class="brand-logos" src="assets/images/home-page/flower.png" alt="logo1">
+                        <h2>GOVT. CERTIFICATE COURSE</h2>
+                    </div>
+                    <div class="vis-tex vis-tex2">
+                        <img class="brand-logos" src="assets/images/home-page/flower.png" alt="logo2">
+                        <h2>CERTIFICATE COURSE</h2>
+                    </div>
+                    <div class="vis-tex vis-tex3">
+                        <img class="brand-logos" src="assets/images/home-page/flower.png" alt="logo3">
+                        <h2>VOCATIONAL COURSE</h2>
+                    </div>
+                    <div class="vis-tex vis-tex2">
+                        <img class="brand-logos" src="assets/images/home-page/flower.png" alt="logo2">
+                        <h2>WORKS OFFERED</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-eight pt-0">
+
+        <div class="overflow-hidden">
+            <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" width="1920" height="102" viewBox="0 0 1920 102"
+                fill="none">
+                <path d="M0 101C0 101 423.5 1 960 1C1496.5 1 1920 101 1920 101" stroke="url(#paint0_linear_82_634)"
+                    stroke-width="2" />
+                <defs>
+                    <linearGradient id="paint0_linear_82_634" x1="0" y1="51" x2="1920" y2="51"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.1" stop-color="#02000B" />
+                        <stop offset="0.495" stop-color="white" />
+                        <stop offset="0.9" stop-color="#02000B" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="container">
+            <h2 class="sec-heding">Affordable<span>Course Fees</span> For Students</h2>
+
+            <p class="sub-heding">We provide quality education at very affordable prices. Choose from a variety of
+                courses designed to build your skills and help you achieve your career goals.</p>
+            <nav class="tabs-btn">
+                <a href="javascript:void(0);" data-tab="one" class="monthly active">Normal</a>
+                <a href="javascript:void(0);" data-tab="two" class="yearly">Programming</a>
+                <div class="clear"></div>
+            </nav>
+            <div class="tabContainer">
+
+                <div id="one" class="Tabcondent active">
+
+                    <div class="row team-page-row">
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price1"></span>
+                                    <h2 class="plan-text">Type Writing & Shorthand(Steno)</h2>
+                                    <h3 class="plan-price">₹ 500<sub>/Month</sub></h3>
+                                    <h3 class="basicLevelPro">High level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>Speed Improvement Techniques</li>
+                                    <li>Regular Tests & Progress Tracking</li>
+                                    <li>Government Exam Preparation</li>
+                                    <li>Certificate Support</li>
+                                    <li>Accuracy Enhancement Exercises</li>
+                                    <li>Keyboard Shortcut Training</li>
+                                    <li>Mock Tests & Performance Evaluation</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply Now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price2"></span>
+                                    <h2 class="plan-text">Ms-Office</h2>
+                                    <h3 class="plan-price">₹ 4000 <sub><br> 2 Months</sub></h3>
+                                    <h3 class="basicLevelPro">Professional level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>MS Word – Document Creation & Formatting</li>
+                                    <li>MS Excel – Formulas, Functions & Data Analysis</li>
+                                    <li>MS PowerPoint – Professional Presentation Design</li>
+                                    <li>Internet & Email Management</li>
+                                    <li>Practical Office Automation Projects</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply Now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price3"></span>
+                                    <h2 class="plan-text">office Automation</h2>
+                                    <h3 class="plan-price">₹ 8000 <sub><br> 3 Month</sub></h3>
+                                    <h3 class="basicLevelPro">Professional level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>Introduction to Computer Fundamentals</li>
+                                    <li>Data Entry and Office Documentation</li>
+                                    <li>Office Productivity and Time Management Tools</li>
+                                    <li>Hands-on Training with Real-Time Office Tasks</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row team-page-row">
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price1"></span>
+                                    <h2 class="plan-text">Tally</h2>
+                                    <h3 class="plan-price">₹ 15000 <sub><br> 3 Month</sub></h3>
+                                    <h3 class="basicLevelPro">High level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>Tally Fundamentals</li>
+                                    <li>Accounting Concepts</li>
+                                    <li>Inventory Management</li>
+                                    <li>Financial Reporting</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply Now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price2"></span>
+                                    <h2 class="plan-text">English</h2>
+                                    <h3 class="plan-price">₹ 5000 <sub><br> 2 Months</sub></h3>
+                                    <h3 class="basicLevelPro">Professional level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>Speaking Practice</li>
+                                    <li>Interview Preparation</li>
+                                    <li>Grammar & Vocabulary</li>
+                                    <li>Role Play Scenarios</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply Now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price3"></span>
+                                    <h2 class="plan-text">Photoshop</h2>
+                                    <h3 class="plan-price">₹ 3000 <sub> <br>2 Month</sub></h3>
+                                    <h3 class="basicLevelPro">Professional level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>Photo Editing & Retouching Techniques</li>
+                                    <li>Layer Management & Masking</li>
+                                    <li>Color Correction & Image Enhancement</li>
+                                    <li>Logo, Banner & Poster Design</li>
+                                    <li>Social Media Creative Design</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="two" class="Tabcondent">
+                    <div class="row team-page-row">
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price4"></span>
+                                    <h2 class="plan-text">Front end development</h2>
+                                    <h3 class="plan-price">₹5000 <br /><sub> 2 months</sub></h3>
+                                    <h3 class="basicLevelPro">Professional level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>HTML5, CSS3 & Responsive Design</li>
+                                    <li>Portfolio Website Creation</li>
+                                    <li>Basic Git & Deployment</li>
+                                    <li>Job & Freelancing Guidance</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price5"></span>
+                                    <h2 class="plan-text">Python Development</h2>
+                                    <h3 class="plan-price">₹ 5000 <br /><sub> 2 months</sub></h3>
+                                    <h3 class="basicLevelPro">medium level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>Python Programming Fundamentals</li>
+                                    <li>Variables, Data Types & Control Statements</li>
+                                    <li>Functions, Modules & Object-Oriented Programming</li>
+                                    <li>Introduction to Web Development with Python</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price6"></span>
+                                    <h2 class="plan-text">Java Development</h2>
+                                    <h3 class="plan-price">₹ 5000 <br /><sub> 2 months</sub></h3>
+                                    <h3 class="basicLevelPro">Medium level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>Variables, Data Types & Operators</li>
+                                    <li>Control Statements & Looping Concepts</li>
+                                    <li>Methods, Arrays & String Handling</li>
+                                    <li>Object-Oriented Programming (OOP) Concepts</li>
+                                    <li>Exception Handling & File Operations</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Get Started
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row team-page-row">
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price4"></span>
+                                    <h2 class="plan-text">C & C++ Development</h2>
+                                    <h3 class="plan-price">₹ 5000 <br /><sub> 2 months</sub></h3>
+                                    <h3 class="basicLevelPro">Medium level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>C Programming Fundamentals</li>
+                                    <li>Variables, Data Types & Operators</li>
+                                    <li>Control Statements, Loops & Functions</li>
+                                    <li>Arrays, Strings & Pointers</li>
+                                    <li>C++ Programming & Object-Oriented Concepts</li>
+                                    <li>Classes, Objects, Inheritance & Polymorphism</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price5"></span>
+                                    <h2 class="plan-text">Half Stack Development</h2>
+                                    <h3 class="plan-price">₹9300 <br /><sub> 4 months</sub></h3>
+                                    <h3 class="basicLevelPro">Professional level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>Python Programming Fundamentals</li>
+                                    <li>Django Framework Development Basics</li>
+                                    <li>Project-Based Learning (Real Applications)</li>
+                                    <li>Responsive Web Design</li>
+                                    <li>Database Integration with MySQL</li>
+                                    <li>REST API Development Fundamentals</li>
+                                    <li>User Authentication & Authorization</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Apply now
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                    <span class="plain-greiesd-bg" id="price6"></span>
+                                    <h2 class="plan-text">Full Stack Development</h2>
+                                    <h3 class="plan-price">₹16500 <br /><sub> 8 months</sub></h3>
+                                    <h3 class="basicLevelPro">Super level performance</h3>
+                                </div>
+                                <ul>
+                                    <li>Frontend: HTML, CSS, JavaScript, Bootstrap & React</li>
+                                    <li>Backend: Python, Django Framework</li>
+                                    <li>API Access for Integration</li>
+                                    <li>Real Project Training with Job Support</li>
+                                    <li>Database Design & MySQL Integration</li>
+                                    <li>Version Control with Git & GitHub</li>
+                                    <li>Responsive Web Application Development</li>
+                                </ul>
+                                <div class="pricing-btn">
+                                    <a href="#" class="button">
+                                        Get Started
+                                        <span class="hoverEffect"><span></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ====================================== Section Six ===================================== -->
+    <section class="section-six pt-0  overflow-hidden">
+        <div class="container">
+            <h2 class="sec-heding">
+                Professional Training &<span> Career Opportunities</span>
+            </h2>
+
+            <p class="sub-heding">
+                We focus on providing quality education and practical training to help students gain real-world skills
+                and
+                achieve successful careers.
+            </p>
+
+            <div class="row marketingRow">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-xxl-6 col-xl-6">
+                    <p class="dui pb-2">
+                        At SR Indian Computers & Typewriting Center, we offer a wide range of courses including computer
+                        education,
+                        typewriting, shorthand, and software training. Our goal is to provide hands-on learning
+                        experience
+                        that helps
+                        students understand real industry requirements.
+                    </p>
+
+                    <p class="dui">
+                        We guide students step-by-step with practical sessions, experienced trainers, and
+                        career-oriented
+                        programs.
+                        Our training helps students improve their technical knowledge, communication skills, and job
+                        readiness
+                        to succeed in today’s competitive world.
+                    </p>
+                </div>
+
+                <!-- RIGHT CONTENT -->
+                <div class="col-xxl-6 col-xl-6">
+
+                    <div class="quis-head">
+                        <div class="features-cir-main quis-main">
+                            <div class="features-cir quis">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <span class="img-bg-circle quis-bg-cir"></span>
+                        </div>
+                        <h3 class="quis-text-list">Practical training with real-time projects</h3>
+                    </div>
+
+                    <div class="quis-head">
+                        <div class="features-cir-main quis-main">
+                            <div class="features-cir quis">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <span class="img-bg-circle quis-bg-cir"></span>
+                        </div>
+                        <h3 class="quis-text-list">Courses in Computer, Typewriting & Shorthand</h3>
+                    </div>
+
+                    <div class="quis-head">
+                        <div class="features-cir-main quis-main">
+                            <div class="features-cir quis">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <span class="img-bg-circle quis-bg-cir"></span>
+                        </div>
+                        <h3 class="quis-text-list">Job-oriented training programs</h3>
+                    </div>
+
+                    <div class="quis-head mb-0">
+                        <div class="features-cir-main quis-main">
+                            <div class="features-cir quis">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <span class="img-bg-circle quis-bg-cir"></span>
+                        </div>
+                        <h3 class="quis-text-list">Placement guidance & career support</h3>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="video-container">
+                <img class="blue-gardient6" src="assets/images/home-page/blue-gardient6.png" alt="blue-gardient6">
+                <img class="blue-gardient5" src="assets/images/home-page/blue-gardient5.png" alt="blue-gardient5">
+                <video autoplay loop muted class="home-sec-one-video">
+                    <source src="assets/images/vv1.mp4" type="video/mp4">
+                </video>
+                <a href="about.html" class="text-circle-main">
+                    <img class="text-circle" src="assets/images/home-page/text-circle.png" alt="text-circle">
+                    <img class="bg-down-arrow" src="assets/images/svg/bg-down-arrow.svg" alt="bg-down-arrow">
+                </a>
+            </div>
+
+            <div class="row whyChooseSec">
+
+                <!-- LEFT SIDE -->
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                    <h2 class="sec-heding whyChoose">
+                        <span>Why Choose Us:</span> SR Indian Computer Studies
+                    </h2>
+
+                    <p class="dui pb-2">
+                        At SR Indian Computers & Typewriting Center, we focus on providing quality education
+                        with practical training. Our goal is to help students gain real skills and build
+                        a strong foundation for their future careers.
+                    </p>
+
+                    <p class="dui">
+                        We offer professional courses with expert guidance, friendly teaching methods,
+                        and step-by-step learning. Students can improve their knowledge, confidence,
+                        and job opportunities through our training programs.
+                    </p>
+
+                    <div class="tryImage-btn-main grnezQ">
+                        <a href="#" class="button">
+                            Join Now
+                            <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+
+                    <div class="exce-box">
+                        <span class="exce-box-ciecl" id="exce-box1"></span>
+                        <div class="excellent">
+                            <p><i class="bi bi-mortarboard-fill"></i> Experienced Trainers</p>
+                        </div>
+                        <h3 class="rnaip">
+                            Learn from skilled and experienced trainers who provide clear explanations and practical
+                            knowledge.
+                        </h3>
+                    </div>
+
+                    <div class="exce-box">
+                        <span class="exce-box-ciecl" id="exce-box2"></span>
+                        <div class="excellent">
+                            <p><i class="bi bi-laptop-fill"></i> Practical Training</p>
+                        </div>
+                        <h3 class="rnaip">
+                            Hands-on practice sessions with real-time projects to improve technical skills and
+                            confidence.
+                        </h3>
+                    </div>
+
+                    <div class="exce-box mb-0">
+                        <span class="exce-box-ciecl" id="exce-box3"></span>
+                        <div class="excellent">
+                            <p><i class="bi bi-briefcase-fill"></i> Career Support</p>
+                        </div>
+                        <h3 class="rnaip">
+                            Get guidance for jobs, interviews, and career growth after completing your course
+                            successfully.
+                        </h3>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================== Section Subscribe ===================================== -->
+    <section class="section-subscribe position-relative">
+
+        <img class="blurek" src="assets/images/home-page/blue-gardient7.png" alt="bg">
+        <img class="blurek2" src="assets/images/home-page/blue-gardient5.png" alt="bg">
+
+        <div class="container position-relative">
+
+            <div class="cretive-box">
+                <h2 class="sec-heding">
+                    <span>Start Your Bright <br> Future Today!</span>
+                </h2>
+
+                <p class="sub-heding">
+                    Success doesn’t come from what you do occasionally, it comes from what you do consistently.
+                    Join SR Indian Computer Center and build your skills with confidence, practical learning,
+                    and expert guidance to achieve your dream career.
+                </p>
+
+                <div class="community-btn-main mb-0">
+                    <a href="join.html" class="button">
+                        Join Now
+                        <span class="hoverEffect">
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-blog position-relative">
+        <img class="blue-gardient8sa" src="assets/images/home-page/blue-gardient8.png" alt="blue-gardient8">
+        <img class="blue-gardient9sa" src="assets/images/home-page/blue-gardient9.png" alt="blue-gardient9">
+        <div class="container">
+            <h1 class="sec-heding"><span>Contact</span> Us</h1>
+            <p class="sub-heding">“Let us guide you towards a successful career. Send us your message and we’ll assist
+                you
+                every step of the way.”
+                “Start your career journey with us. Reach out today and our team will support you.”
+                “We’re here to help you build your future. Contact us and take the first step today.”
+            </p>
+            <div class="row home-features-row">
+
+                <!-- CALL -->
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                    <div class="features-cir-main">
+                        <div class="features-cir icon-glow call">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <span class="img-bg-circle"></span>
+                    </div>
+
+                    <h2 class="gendseratio">Call Us</h2>
+                    <p class="eugiat">Call us anytime for course details</p>
+                    <a class="numb-con" href="tel:7530091724">+91 7530091724 , <br> 9543510602</a>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                    <div class="features-cir-main">
+                        <div class="features-cir icon-glow email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <span class="img-bg-circle"></span>
+                    </div>
+
+                    <h2 class="gendseratio">Email Us</h2>
+                    <p class="eugiat">Send us your queries anytime</p>
+                    <a class="numb-con" href="mailto:srindiancomputers@gmail.com">
+                        srindiancomputers@ <br>gmail.com
+                    </a>
+                </div>
+
+                <!-- ADDRESS -->
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                    <div class="features-cir-main">
+                        <div class="features-cir icon-glow location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <span class="img-bg-circle"></span>
+                    </div>
+
+                    <h2 class="gendseratio">Our Address</h2>
+                    <p class="eugiat">
+                        Kurumpanai Turning, New Junction,<br>
+                        <a class="numb-con" href="#">Karungal</a>
+                    </p>
+                </div>
+
+            </div>
+            <div class="row form-row pb-0 position-relative">
+                <img class="askjm-sa" src="assets/images/home-page/blue-gardient7.png" alt="blue-gardient7">
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9">
+                    <form class="from-main">
+                        <h2 class="sec-heding quest">Start Your <span>Journey</span></h2>
+
+                        <p class="dui seci lkkfs">
+                            Have questions about courses? Contact us and we’ll help you choose the right path.
+                        </p>
+
+                        <input class="conta-input-main" type="text" placeholder="Enter your full name" name="fullName">
+
+                        <input class="conta-input-main" type="email" placeholder="Enter your email address"
+                            name="email">
+
+                        <input class="conta-input-main" type="tel" placeholder="Enter your mobile number" name="mobile">
+
+                        <textarea name="message" placeholder="Write your message"></textarea>
+
+                        <div class="submit-btn">
+                            <button type="submit" class="button">
+                                Submit Now
+                                <span class="hoverEffect"><span></span></span>
+                            </button>
+                        </div>
+                        <!-- SOCIAL ICONS -->
+                        <div class="social-contact">
+                            <a href="#" class="social-icon fb"><i class="bi bi-facebook"></i></a>
+                            <a href="" class="social-icon wa"><i class="bi bi-whatsapp"></i></a>
+                            <a href="" class="social-icon gm"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                    <img class="shoot-fanta" src="assets/images/aa18.jpg" alt="shoot-fanta">
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.7822282094935!2d77.24046337500975!3d8.235077591797937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ff81c0183f13%3A0x7079561dbad0a367!2sSR%20INDIAN%20COMPUTERS%20%26%20TYPEWRITING%20CENTRE!5e1!3m2!1sen!2sin!4v1774433054027!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================== Section Footer ===================================== -->
+    <footer class="position-relative footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-6 col-lg-5 footer-col-fir">
+                    <svg class="djks" xmlns="http://www.w3.org/2000/svg" width="2" height="100" viewBox="0 0 2 100"
+                        fill="none">
+                        <path d="M1 0L0.999996 100" stroke="url(#paint0_linear_137_269)" stroke-width="2" />
+                        <defs>
+                            <linearGradient id="paint0_linear_137_269" x1="1.5" y1="2.18557e-08" x2="1.5" y2="100"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#1A1A1A" offset="0" />
+                                <stop offset="0.5" stop-color="#00FFB1" />
+                                <stop offset="1" stop-color="#1A1A1A" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <h2 class="sec-heding advice">
+                        <span> SR Indian Computer Center Expert Training & Guidance</span>
+                    </h2>
+
+                    <p class="dui seci dsos">
+                        At SR Indian Computer Center, we provide quality education and practical training to help
+                        students
+                        build strong skills for their future. Our courses are designed to improve knowledge, confidence,
+                        and career opportunities in both technical and professional fields.
+                    </p>
+                    <div class="ref-demo">
+                        <a href="index.html" class="button"> Request Demo
+                            <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-7 footer-col-sec">
+                    <img class="footer-gefdo" src="assets/images/home-page/blue-gardient2.png" alt="blue-gardient2">
+                    <div class="box-footer">
+                        <p class="resour">Resources</p>
+                        <ul class="foot-links">
+
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="features.html">Courses</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="box-footer">
+                        <p class="resour">Quick Links</p>
+                        <ul class="foot-links">
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="online_services.html">Online Services</a></li>
+                            <li><a href="collageapplication.html">Courses</a></li>
+                            <li><a href="recharge.html">Bill</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coprights-main">
+            <svg class="das" xmlns="http://www.w3.org/2000/svg" width="100" height="2" viewBox="0 0 100 2" fill="none">
+                <path d="M100 1L8.49366e-07 0.999996" stroke="url(#paint0_linear_137_271)" stroke-width="2" />
+                <defs>
+                    <linearGradient id="paint0_linear_137_271" x1="100" y1="1.5" x2="-2.18557e-08" y2="1.5"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#1A1A1A" offset="0" />
+                        <stop offset="0.5" stop-color="#5C33FF" />
+                        <stop offset="1" stop-color="#1A1A1A" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <div class="container">
+                <div class="rights-reserved">
+                    <h2>© 2026 - All rights reserved by
+                        <a href="https://jebindevp.github.io/My-Protifolio/" target="_blank">Jebin Devp</a>
+                    </h2>
+                    <div class="footer-media">
+                        <a href="https://www.facebook.com/"><img src="assets/images/svg/facebook.svg"
+                                alt="facebook">Facebook</a>
+                        <a href="https://www.instagram.com/"><img src="assets/images/svg/insta.svg"
+                                alt="insta">Instagram</a>
+                        <a href="https://x.com/"><img src="assets/images/svg/twitter.svg" alt="twitter">Twitter</a>
+                        <a href="https://www.linkedin.com/"><img src="assets/images/svg/linkedin.svg"
+                                alt="linkedin">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================================== Bottom To Top Button ===================================== -->
+    <button class="bottom-top-button">&#8593;</button>
+    <!-- ====================================== Bottom To Top Button End ===================================== -->
+    <script src="assets/javascript/jquery.js"></script>
+    <script src="assets/javascript/smooth-scroll.js"></script>
+    <script src="assets/javascript/bootstrap.min.js"></script>
+    <script src="assets/javascript/slick.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                document.getElementById("loader").style.opacity = "0";
+                document.getElementById("loader").style.transition = "0.5s";
+
+                setTimeout(function () {
+                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }, 500);
+
+            }, 3000); // 3 seconds
+        });
+    </script>
+
+</body>
+
+
+<!-- Mirrored from up2client.com/envato/ciri-ai/html/main/MultiPage-CiriAI/features.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Apr 2025 07:07:35 GMT -->
+
+</html>

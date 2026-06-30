@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from up2client.com/envato/ciri-ai/html/main/MultiPage-CiriAI/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Apr 2025 07:07:40 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link rel="icon" type="image/png" href="assets/images/logo2.png">
+    <link rel="stylesheet" href="assets/css/swap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media_query.css">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <style>
+        /* Full Screen Loader */
+        .page-loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Circle Loader */
+        .circle-loader {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Rotating Border Animation */
+        .circle-loader::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top: 5px solid #00f7ff;
+            border-right: 5px solid #00f7ff;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Glow Effect */
+        .circle-loader::after {
+            content: '';
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 247, 255, 0.2), transparent);
+        }
+
+        /* Logo Text */
+        .logo-text {
+            position: relative;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 2;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Spin Animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Text Pulse */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* 📱 Responsive Design */
+        @media (max-width: 768px) {
+            .circle-loader {
+                width: 90px;
+                height: 90px;
+            }
+
+            .logo-text {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .circle-loader {
+                width: 70px;
+                height: 70px;
+            }
+
+            .logo-text {
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .page-loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Circle Loader */
+        .circle-loader {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle-loader::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top: 5px solid #00f7ff;
+            border-right: 5px solid #00f7ff;
+            animation: spin 1s linear infinite;
+        }
+
+        .circle-loader::after {
+            content: '';
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 247, 255, 0.2), transparent);
+        }
+
+        .logo-text {
+            position: relative;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .circle-loader {
+                width: 90px;
+                height: 90px;
+            }
+
+            .logo-text {
+                font-size: 13px;
+            }
+        }
+
+
+        /* Section Background */
+        .stats-section {
+            background: #0a0a0a;
+            padding: 60px 20px;
+        }
+
+        /* Grid Layout */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Card Design */
+        .card {
+            background: #111;
+            border-radius: 15px;
+            text-align: center;
+            padding: 30px 20px;
+            transition: 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+        }
+
+        /* Icon */
+        .card i {
+            font-size: 45px;
+            color: #00f7ff;
+            margin-bottom: 15px;
+        }
+
+        /* Heading */
+        .card h5 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        /* Sub Text */
+        .card p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Hover Effect */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
+        }
+
+        /* 📱 Responsive */
+        @media (max-width: 992px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* ================= CONTAINER ================= */
+        .hometags-main {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        /* Title */
+        .popTg {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* ================= TAG BUTTON ================= */
+        .hometags {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 8px;
+            padding: 12px 22px;
+
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+
+            border-radius: 0;
+            /* ❌ No rounded */
+            z-index: 1;
+            overflow: hidden;
+
+            letter-spacing: 0.5px;
+            transition: 0.3s ease;
+        }
+
+        /* Gradient Border */
+        .hometags::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            /* Border thickness */
+
+            background: linear-gradient(90deg, #00f7ff, #58c3ed, #00f7ff);
+
+            -webkit-mask:
+                linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            z-index: -1;
+        }
+
+        /* Inner Background */
+        .hometags::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #0a0a0a;
+            z-index: -2;
+        }
+
+        /* ================= HOVER ================= */
+        .hometags:hover {
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        /* Fill effect on hover */
+        .hometags:hover::after {
+            background: linear-gradient(90deg, #00f7ff, #93ccef);
+        }
+
+        /* Glow */
+        .hometags:hover::before {
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.6);
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .hometags {
+                padding: 10px 18px;
+                font-size: 13px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .hometags {
+                display: block;
+                width: 90%;
+                margin: 10px auto;
+                text-align: center;
+            }
+
+            .popTg {
+                font-size: 20px;
+            }
+        }
+
+
+        /* Container */
+        .logos {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        /* Slide */
+        .logos-slide {
+            display: inline-block;
+            animation: scroll-left 20s linear infinite;
+        }
+
+        /* Reverse direction */
+        .logos-slide.rtl {
+            animation: scroll-right 20s linear infinite;
+        }
+
+        /* Content */
+        .marquee__content {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Text Box */
+        .marquee-text {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #111;
+            color: #00f7ff;
+            border: 1px solid #00f7ff;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Hover Effect */
+        .marquee-text:hover {
+            background: #00f7ff;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        /* Animation */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .marquee-text {
+                font-size: 12px;
+                padding: 8px 14px;
+            }
+        }
+
+
+        .map-container {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .map-container iframe {
+                height: 250px;
+            }
+        }
+
+
+
+        .social-contact {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        /* Colors */
+        .fb {
+            background: #1877f2;
+        }
+
+        .wa {
+            background: #25d366;
+        }
+
+        .gm {
+            background: #ea4335;
+        }
+
+        /* Hover Effect */
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ICON BOX */
+        .features-cir {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #fff;
+            margin: auto;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        /* GLOW EFFECT COLORS */
+        .icon-glow.call {
+            box-shadow: 0 0 15px #00f7ff;
+        }
+
+        .icon-glow.email {
+            box-shadow: 0 0 15px #ff00c8;
+        }
+
+        .icon-glow.location {
+            box-shadow: 0 0 15px #00ff88;
+        }
+
+        /* HOVER EFFECT */
+        .features-cir:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #fff;
+        }
+
+        /* TEXT CENTER */
+        .gendseratio,
+        .eugiat,
+        .numb-con {
+            text-align: center;
+            display: block;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .features-cir {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+        }
+
+
+        /* SECTION BACKGROUND */
+        .subs-sec {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* TEXT */
+        .sec-heding {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .sec-heding span {
+            color: #00eaff;
+        }
+
+        .dui {
+            margin: 15px 0 25px;
+            opacity: 0.8;
+        }
+
+        /* INPUT + BUTTON */
+        .sub-scjsd-inp-main {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .sub-scjsd-inp-main input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 18px;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        /* BUTTON */
+        .subscribeBtn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: #00eaff;
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .subscribeBtn:hover {
+            background: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* CHECKBOX */
+        .footer-checkbox-sec {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .footer-checkbox-input {
+            margin-right: 8px;
+        }
+
+        /* IMAGE WRAPPER */
+        .image-wrapper {
+            position: relative;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        /* MAIN IMAGE */
+        .img-main {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        /* OVERLAY IMAGE */
+        .img-overlay {
+            position: absolute;
+            bottom: -40px;
+            right: -40px;
+            width: 60%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* GLOW EFFECT */
+        .img-overlay:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .subs-sec {
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            .sub-scjsd-inp-main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sub-scjsd-inp-main input,
+            .subscribeBtn {
+                width: 100%;
+            }
+
+            .image-wrapper {
+                margin-top: 40px;
+            }
+
+            .img-overlay {
+                position: static;
+                width: 100%;
+                height: 180px;
+                margin-top: 15px;
+                border: none;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+            .sec-heding {
+                font-size: 26px;
+            }
+
+            .img-main {
+                height: 250px;
+            }
+
+            .img-overlay {
+                height: 150px;
+            }
+        }
+
+
+
+
+        /* SECTION */
+        .team-section {
+            padding: 90px 0;
+            background: radial-gradient(circle at top, #020617, #000);
+            color: #fff;
+        }
+
+        /* GRID */
+        .team-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* CARD */
+        .team-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+
+
+
+        @keyframes borderMove {
+            0% {
+                background-position: 0%
+            }
+
+            100% {
+                background-position: 400%
+            }
+        }
+
+        /* INNER GLASS CARD */
+        .team-card-inner {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        /* IMAGE */
+        .team-img {
+            overflow: hidden;
+        }
+
+        .team-img img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        /* IMAGE ZOOM ON HOVER */
+        .team-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* CONTENT */
+        .team-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+            transform: translateY(100%);
+            transition: 0.5s ease;
+        }
+
+        /* SHOW CONTENT */
+        .team-card:hover .team-content {
+            transform: translateY(0);
+        }
+
+        /* TEXT */
+        .team-content h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .dept {
+            color: #00eaff;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .desc {
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        /* ICONS */
+        .team-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            margin-right: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        /* ICON HOVER GLOW */
+        .team-icons a:hover {
+            background: #00eaff;
+            color: #000;
+            box-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+        }
+
+        /* CARD HOVER SHADOW */
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 234, 255, 0.2);
+        }
+
+        /* PAGINATION */
+        .pagination {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .pagination button {
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(45deg, #00eaff, #00ff88);
+            color: #000;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .pagination button:hover {
+            transform: scale(1.1);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .team-img img {
+                height: 250px;
+            }
+
+            .team-content {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-section {
+                padding: 60px 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ====================================== Loader ===================================== -->
+    <div class="page-loader" id="loader">
+        <div class="circle-loader">
+            <span class="logo-text">SRINDIAN</span>
+        </div>
+    </div>
+
+    <!-- ====================================== Header ===================================== -->
+    <div class="overlay" onclick="toggleMenu()"></div>
+    <header id="top-navbar" class="top-navbar">
+        <div class="container">
+            <nav>
+
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <img src="assets/images/SRI LOGO.png" alt="menu">
+                </div>
+                <div class="nav-links-mn">
+                    <ul class="nav-links">
+                        <!-- <li class="d-flex justify-content-center">
+                     <a href="services.html" class="side-menu-logo">
+                        <img src="assets/images/SRI LOGO.png" alt="logo" height="140px" style="border-radius: 50%;">
+                     </a>
+                  </li> -->
+                        <img src="assets/images/SRI LOGO.png" alt="logo" height="100px" style="border-radius: 50%;">
+                        <li><a class="a-link" href="index.html">Home</a></li>
+                        <li><a class="a-link" href="features.html">Course</a></li>
+                        <li><a class="a-link" href="about.html">About</a></li>
+                        <li><a class="a-link" href="pricing.html">Pricing</a></li>
+                        <li><a class="a-link" href="blog.html">Blog</a></li>
+                        <li><a class="a-link" href="team.html">Team</a></li>
+                        <li><a class="a-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="header-buttons-main">
+                        <a href="#" class="button2">
+                            <span>Join Now</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-three position-relative pt-0">
+
+        <div class="container">
+            <h2 class="ering reveal-text">“We are dedicated to empowering students with practical skills in computers
+                and
+                typewriting, helping them build successful careers and achieve a brighter future.”</h2>
+            <div class="community-btn-main">
+                <a href="#subscribe" class="button"> Join Now
+                    <span class="hoverEffect">
+                        <span></span>
+                    </span>
+                </a>
+            </div>
+            <p class="sub-heding glob pt-0">“1,000+ students have successfully studied and completed their courses
+                with us.”</p>
+        </div>
+        <div class="logos logos1">
+            <div class="logos-slide ltr">
+                <div class="marquee__content">
+
+                    <div class="marquee-text">Python</div>
+                    <div class="marquee-text">Django</div>
+                    <div class="marquee-text">Java</div>
+                    <div class="marquee-text">JavaScript</div>
+                    <div class="marquee-text">HTML & CSS</div>
+                    <div class="marquee-text">Bootstrap</div>
+                    <div class="marquee-text">React</div>
+                    <div class="marquee-text">MS Office</div>
+                    <div class="marquee-text">Tally</div>
+                    <div class="marquee-text">C & C++</div>
+                    <div class="marquee-text">DCA & DTP</div>
+                    <div class="marquee-text">Typewriting</div>
+                    <div class="marquee-text">Shorthand (Steno)</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="logos">
+            <div class="logos-slide rtl">
+                <div class="marquee__content">
+
+                    <div class="marquee-text">Python</div>
+                    <div class="marquee-text">Django</div>
+                    <div class="marquee-text">Java</div>
+                    <div class="marquee-text">JavaScript</div>
+                    <div class="marquee-text">HTML & CSS</div>
+                    <div class="marquee-text">Bootstrap</div>
+                    <div class="marquee-text">React</div>
+                    <div class="marquee-text">MS Office</div>
+                    <div class="marquee-text">Tally</div>
+                    <div class="marquee-text">C & C++</div>
+                    <div class="marquee-text">DCA & DTP</div>
+                    <div class="marquee-text">Typewriting</div>
+                    <div class="marquee-text">Shorthand (Steno)</div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="course-section">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="card">
+                        <img src="assets/images/slider/sl1.jpg" alt="" />
+                        <div class="overlay">Excel Course</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl2.jpg" alt="" />
+                        <div class="overlay">FULLSTACK DEVELOPMENT</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl3.jpg" alt="" />
+                        <div class="overlay">WEB DESIGN</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl4.jpg" alt="" />
+                        <div class="overlay">PYTHON</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl5.jpg" alt="" />
+                        <div class="overlay">Programming</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl6.jpg" alt="" />
+                        <div class="overlay">TALLY</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl7.jpg" alt="" />
+                        <div class="overlay">Ms-Office</div>
+                    </div>
+
+                    <!-- DUPLICATE FOR AUTO SCROLL -->
+                    <div class="card">
+                        <img src="assets/images/slider/sl1.jpg" alt="" />
+                        <div class="overlay">Excel Course</div>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/slider/sl7.jpg" alt="" />
+                        <div class="overlay">MS Office</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                background: #0a0f1f;
+            }
+
+            /* SECTION */
+            .course-section {
+                padding: 40px 20px;
+                text-align: center;
+            }
+
+            .title {
+                color: #fff;
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+
+            /* SLIDER */
+            .slider {
+                overflow: hidden;
+                position: relative;
+            }
+
+            /* TRACK */
+            .slide-track {
+                display: flex;
+                gap: 20px;
+                animation: scroll 25s linear infinite;
+            }
+
+            /* CARD */
+            .card {
+                min-width: 250px;
+                height: 300px;
+                border-radius: 15px;
+                overflow: hidden;
+                position: relative;
+                flex-shrink: 0;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+
+            .card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* HOVER EFFECT */
+            .card:hover {
+                transform: scale(1.08);
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 15px;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            /* AUTO SCROLL */
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            /* RESPONSIVE */
+            @media (max-width: 992px) {
+                .card {
+                    min-width: 200px;
+                    height: 250px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .card {
+                    min-width: 160px;
+                    height: 220px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .card {
+                    min-width: 130px;
+                    height: 180px;
+                }
+            }
+        </style>
+    </section>
+    <!-- ====================================== Section===================================== -->
+    <section class="team-section">
+        <div class="container">
+            <h1 class="sec-heding"><span>Our</span> Team</h1>
+            <p class="sub-heding">Meet our expert trainers who guide you towards success.</p> <br /><br />
+
+            <div class="team-wrapper" id="teamWrapper">
+                <!-- CARD 1 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt1.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Mr. Selvin Sekar</h3>
+                        <p class="dept">Owner Of The Institute</p>
+                        <p class="desc">Owner and operator of the institute with 20+ years of experience.</p>
+
+                        <div class="team-icons">
+                            <a href="tel:7530091724"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="https://wa.me/917530091724"><i class="bi bi-whatsapp"></i></a>
+                            <a href="mailto:srindiancomputers@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt2.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Vinija</h3>
+                        <p class="dept"> Senior Office Assistant & Tally Teacher</p>
+                        <p class="desc">Specialist in Tally, GST & Accounting training.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt3.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Stella Rani</h3>
+                        <p class="dept">Senior Typewriting & Shorthand Teacher</p>
+                        <p class="desc">Professional typing trainer for Govt exam preparation.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 11 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt4.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Oviya</h3>
+                        <p class="dept">Senior Office Assistant & Typewriting Shorthand Teacher & Ms-Office Teacher </p>
+                        <p class="desc">Online application specialist with expertise in providing technical support and
+                            training.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 8 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt5.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Shaji</h3>
+                        <p class="dept">Part Time Staff & Spoken English Teacher</p>
+                        <p class="desc">Online Application and Students Specialist with expertise in providing technical
+                            support and training.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 9 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt6.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Jepa Jerisha</h3>
+                        <p class="dept">Print Operator</p>
+                        <p class="desc">Experienced Print Operator with expertise in operating printing equipment and
+                            ensuring high-quality output.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt7.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Jonisha</h3>
+                        <p class="dept">Office Assistant & Ms-Office Teacher</p>
+                        <p class="desc">Experienced Office Assistant managing records, data entry, MS Office tasks, and
+                            administrative support efficiently.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt8.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Asmi</h3>
+                        <p class="dept">Office Assistant</p>
+                        <p class="desc">Experienced Office Assistant managing records, data entry, MS Office tasks, and
+                            administrative support efficiently.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 7 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt9.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Jebin</h3>
+                        <p class="dept">Full Stack Developer & Web Designer</p>
+                        <p class="desc">Experienced Full Stack Developer with expertise in both frontend and backend
+                            technologies, delivering robust and scalable web applications.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt10.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Asha</h3>
+                        <p class="dept">Computer Teacher</p>
+                        <p class="desc">Computer Instructor in MS Office (Word, Excel, PowerPoint) and Digital Painting,
+                            helping students build strong computer knowledge.</p>
+
+                        <div class="team-icons">
+                            <a href="tel:7530091724"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="https://wa.me/917530091724"><i class="bi bi-whatsapp"></i></a>
+                            <a href="mailto:srindiancomputers@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 10 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt11.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Enisha</h3>
+                        <p class="dept">Typewritting teacher & Drawing </p>
+                        <p class="desc">Experienced Typewriting Teacher and Drawing Instructor, providing quality
+                            education and guidance to students.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination">
+                <button onclick="prevPage()">Prev</button>
+                <button id="pageNumber">1</button>
+                <button onclick="nextPage()">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* =========================
+       TEAM GRID
+    ========================= */
+
+
+
+
+        .team-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        /* =========================
+       CARD
+    ========================= */
+
+        .team-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+            height: 430px;
+            cursor: pointer;
+
+            background: #111827;
+
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+
+            transition: 0.4s;
+        }
+
+        /* HOVER */
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* =========================
+       IMAGE
+    ========================= */
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.6s;
+        }
+
+        /* IMAGE ZOOM */
+        .team-card:hover .team-img img {
+            transform: scale(1.12);
+        }
+
+        /* =========================
+       OVERLAY
+    ========================= */
+
+        .team-content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding: 25px;
+
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.72), transparent);
+
+            transform: translateY(72%);
+
+            transition: 0.5s;
+        }
+
+        /* SHOW CONTENT ON HOVER */
+        .team-card:hover .team-content {
+            transform: translateY(0);
+        }
+
+        /* =========================
+       TEXT
+    ========================= */
+
+        .team-content h3 {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .dept {
+            color: #00eaff;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .desc {
+            color: #d1d5db;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.5s;
+        }
+
+        /* SHOW DESCRIPTION */
+        .team-card:hover .desc {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+       ICONS
+    ========================= */
+
+        .team-icons {
+            display: flex;
+            gap: 14px;
+
+            opacity: 0;
+            transform: translateY(20px);
+
+            transition: 0.5s;
+        }
+
+        /* SHOW ICONS */
+        .team-card:hover .team-icons {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ICON BUTTON */
+        .team-icons a {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #fff;
+            font-size: 18px;
+
+            text-decoration: none;
+
+            background: linear-gradient(135deg, #00eaff, #007bff);
+
+            transition: 0.4s;
+        }
+
+        /* ICON HOVER */
+        .team-icons a:hover {
+            transform: translateY(-6px) scale(1.1);
+
+            background: linear-gradient(135deg, #22c55e, #06b6d4);
+
+            box-shadow: 0 10px 25px rgba(0, 234, 255, 0.4);
+        }
+
+        /* =========================
+       PAGINATION
+    ========================= */
+
+        .pagination {
+            margin-top: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+        }
+
+        /* BUTTON */
+        .pagination button {
+            min-width: 55px;
+            height: 50px;
+
+            border: none;
+            outline: none;
+
+            border-radius: 16px;
+
+            padding: 0 22px;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            color: #fff;
+
+            cursor: pointer;
+
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+
+            transition: 0.4s;
+        }
+
+        /* PAGE NUMBER */
+        #pageNumber {
+            background: linear-gradient(135deg, #22c55e, #14b8a6);
+        }
+
+        /* HOVER */
+        .pagination button:hover {
+            transform: translateY(-5px) scale(1.05);
+
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+        }
+
+        /* =========================
+       RESPONSIVE
+    ========================= */
+
+        @media (max-width: 991px) {
+            .team-wrapper {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-card {
+                height: 400px;
+            }
+
+            .team-content {
+                transform: translateY(0);
+            }
+
+            .desc,
+            .team-icons {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .team-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .team-card {
+                height: 380px;
+            }
+
+            .team-content h3 {
+                font-size: 22px;
+            }
+
+            .desc {
+                font-size: 13px;
+            }
+
+            .pagination {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .pagination button {
+                min-width: 48px;
+                height: 45px;
+                font-size: 14px;
+            }
+        }
+    </style>
+
+    <script>
+        let currentPage = 1
+        const cardsPerPage = 3
+        const cards = document.querySelectorAll('.team-card')
+
+        function showPage(page) {
+            let start = (page - 1) * cardsPerPage
+            let end = start + cardsPerPage
+
+            cards.forEach((card, index) => {
+                if (index >= start && index < end) {
+                    card.style.display = 'block'
+                    setTimeout(() => {
+                        card.style.opacity = '1'
+                        card.style.transform = 'translateY(0)'
+                    }, index * 100)
+                } else {
+                    card.style.display = 'none'
+                }
+            })
+
+            document.getElementById('pageNumber').innerText = page
+        }
+
+        function nextPage() {
+            if (currentPage * cardsPerPage < cards.length) {
+                currentPage++
+                showPage(currentPage)
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--
+                showPage(currentPage)
+            }
+        }
+
+        showPage(currentPage)
+    </script>
+
+    <!-- ====================================== Section Footer ===================================== -->
+    <footer class="position-relative footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-6 col-lg-5 footer-col-fir">
+                    <svg class="djks" xmlns="http://www.w3.org/2000/svg" width="2" height="100" viewBox="0 0 2 100"
+                        fill="none">
+                        <path d="M1 0L0.999996 100" stroke="url(#paint0_linear_137_269)" stroke-width="2" />
+                        <defs>
+                            <linearGradient id="paint0_linear_137_269" x1="1.5" y1="2.18557e-08" x2="1.5" y2="100"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#1A1A1A" offset="0" />
+                                <stop offset="0.5" stop-color="#00FFB1" />
+                                <stop offset="1" stop-color="#1A1A1A" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <h2 class="sec-heding advice">
+                        <span> SR Indian Computer Center Expert Training & Guidance</span>
+                    </h2>
+
+                    <p class="dui seci dsos">
+                        At SR Indian Computer Center, we provide quality education and practical training to help
+                        students
+                        build strong skills for their future. Our courses are designed to improve knowledge, confidence,
+                        and career opportunities in both technical and professional fields.
+                    </p>
+                    <div class="ref-demo">
+                        <a href="index.html" class="button"> Request Demo
+                            <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-7 footer-col-sec">
+                    <img class="footer-gefdo" src="assets/images/home-page/blue-gardient2.png" alt="blue-gardient2">
+                    <div class="box-footer">
+                        <p class="resour">Resources</p>
+                        <ul class="foot-links">
+
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="features.html">Courses</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="box-footer">
+                        <p class="resour">Quick Links</p>
+                        <ul class="foot-links">
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="online_services.html">Online Services</a></li>
+                            <li><a href="collageapplication.html">Courses</a></li>
+                            <li><a href="recharge.html">Bill</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coprights-main">
+            <svg class="das" xmlns="http://www.w3.org/2000/svg" width="100" height="2" viewBox="0 0 100 2" fill="none">
+                <path d="M100 1L8.49366e-07 0.999996" stroke="url(#paint0_linear_137_271)" stroke-width="2" />
+                <defs>
+                    <linearGradient id="paint0_linear_137_271" x1="100" y1="1.5" x2="-2.18557e-08" y2="1.5"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#1A1A1A" offset="0" />
+                        <stop offset="0.5" stop-color="#5C33FF" />
+                        <stop offset="1" stop-color="#1A1A1A" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <div class="container">
+                <div class="rights-reserved">
+                    <h2>© 2026 - All rights reserved by
+                        <a href="https://jebindevp.github.io/My-Protifolio/" target="_blank">Jebin Devp</a>
+                    </h2>
+                    <div class="footer-media">
+                        <a href="https://www.facebook.com/"><img src="assets/images/svg/facebook.svg"
+                                alt="facebook">Facebook</a>
+                        <a href="https://www.instagram.com/"><img src="assets/images/svg/insta.svg"
+                                alt="insta">Instagram</a>
+                        <a href="https://x.com/"><img src="assets/images/svg/twitter.svg" alt="twitter">Twitter</a>
+                        <a href="https://www.linkedin.com/"><img src="assets/images/svg/linkedin.svg"
+                                alt="linkedin">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================================== Bottom To Top Button ===================================== -->
+    <button class="bottom-top-button">&#8593;</button>
+    <!-- ====================================== Bottom To Top Button End ===================================== -->
+    <script src="assets/javascript/jquery.js"></script>
+    <script src="assets/javascript/smooth-scroll.js"></script>
+    <script src="assets/javascript/bootstrap.min.js"></script>
+    <script src="assets/javascript/slick.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+
+
+    <script>
+        let currentPage = 1;
+        const cardsPerPage = 3;
+        const cards = document.querySelectorAll(".team-card");
+
+        function showPage(page) {
+            let start = (page - 1) * cardsPerPage;
+            let end = start + cardsPerPage;
+
+            cards.forEach((card, index) => {
+                card.style.display = (index >= start && index < end) ? "block" : "none";
+            });
+
+            document.getElementById("pageNumber").innerText = page;
+        }
+
+        function nextPage() {
+            if ((currentPage * cardsPerPage) < cards.length) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+
+        // INIT
+        showPage(currentPage);
+    </script>
+
+</body>
+
+
+<!-- Mirrored from up2client.com/envato/ciri-ai/html/main/MultiPage-CiriAI/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Apr 2025 07:07:41 GMT -->
+
+</html>
