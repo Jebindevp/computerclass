@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <style>
         /* Full Screen Loader */
         .page-loader {
@@ -1103,7 +1105,7 @@
                 }
 
                 100% {
-                    transform: translateX(-50%);
+                    transform: translateX(-200%);
                 }
             }
 
@@ -1130,24 +1132,399 @@
             }
         </style>
     </section>
+
+    <section class="section-six about-new">
+        <div class="container">
+
+            <h1 class="sec-heding"><span>Head Officer</span> </h1> <br>
+
+            <div class="row align-items-center about-row">
+
+                <!-- LEFT CONTENT -->
+
+                <div class="col-lg-6">
+
+                    <div class="about-content">
+
+                        <h2>SR Indian Computers & Typewriting Center, Karungal</h2> <br>
+
+
+                        <p class="about-text">
+                            Our institute offers professional coaching in Computer Education,
+                            Typewriting, Shorthand, Office Automation, Tally with GST,
+                            Programming Languages, Spoken English and various Government
+                            Certification Courses with experienced faculty and modern teaching methods.
+                        </p>
+
+                        <ul class="about-points">
+
+                            <li>Experienced Faculty & Individual Attention</li>
+
+                            <li>Government Exam Coaching</li>
+
+                            <li>Computer & Programming Courses</li>
+
+                            <li>Typewriting & Shorthand Training</li>
+
+                            <li>Practical Lab with Modern Systems</li>
+
+                            <li>Placement Assistance</li>
+
+                        </ul>
+
+                        <a href="https://wa.me/917530091724?text=Hi%2C%20I%20saw%20your%20SR%20INDIAN%20Computers%20%26%20Typewriting%20Center%20website.%20I%20would%20like%20to%20know%20more%20about%20your%20courses.%20Please%20share%20the%20course%20details%2C%20fees%2C%20duration%2C%20and%20admission%20process."
+                            class="about-btn" target="_blank">
+                            Contact Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT IMAGE -->
+
+                <div class="col-lg-6 text-center">
+
+                    <div class="about-image-box">
+
+                        <img src="assets/images/team/tt1.jpg" class="about-img" alt="Head Officer">
+
+                        <div class="image-overlay">
+
+                            <h3>Selvin Seker</h3>
+                            <p>Head Officer</p>
+
+                            <div class="social-icons">
+
+                                <a href="tel:+919876543210">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+
+                                <a href="https://wa.me/919876543210">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+
+                                <a href="mailto:srindiancomputers@gmail.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .about-image-box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .image-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .75);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            opacity: 0;
+            transition: .4s;
+        }
+
+        .about-image-box:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .image-overlay h3 {
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .image-overlay p {
+            color: #0d6efd;
+            font-size: 18px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 18px;
+        }
+
+        .social-icons a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #0d6efd;
+            color: #fff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            font-size: 20px;
+
+            transition: .3s;
+        }
+
+        .social-icons a:hover {
+            background: #fff;
+            color: #0d6efd;
+            transform: translateY(-5px);
+        }
+
+        @media(max-width:768px) {
+
+            .image-overlay h3 {
+                font-size: 24px;
+            }
+
+            .image-overlay p {
+                font-size: 15px;
+            }
+
+            .social-icons a {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+        }
+
+        /*==============================
+        ABOUT US SECTION
+===============================*/
+
+        .about-new {
+            padding: 80px 0;
+            background: transparent;
+            color: white;
+        }
+
+        .sec-heding {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .sec-heding span {
+            color: #0d6efd;
+        }
+
+        .about-row {
+            row-gap: 40px;
+        }
+
+        /*==============================
+        LEFT CONTENT
+===============================*/
+
+        .about-content {
+            padding: 20px;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #fbf7f7;
+            margin-bottom: 25px;
+        }
+
+        .about-points {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px;
+        }
+
+        .about-points li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            font-size: 17px;
+            color: #f6efef;
+            font-weight: 500;
+        }
+
+        .about-points li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #28a745;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .about-btn {
+            display: inline-block;
+            background: #0d6efd;
+            color: #fff;
+            padding: 14px 35px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s ease;
+        }
+
+        .about-btn:hover {
+            background: #084db4;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+        }
+
+        /*==============================
+        IMAGE
+===============================*/
+
+        .about-image-box {
+            text-align: center;
+        }
+
+        .about-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+            transition: .4s;
+        }
+
+        .about-img:hover {
+            transform: scale(1.03);
+        }
+
+        /*==============================
+        TABLET
+===============================*/
+
+        @media (max-width: 991px) {
+
+            .about-new {
+                padding: 60px 0;
+            }
+
+            .sec-heding {
+                font-size: 34px;
+            }
+
+            .about-content {
+                text-align: center;
+                padding: 10px;
+            }
+
+            .about-points {
+                display: inline-block;
+                text-align: left;
+            }
+
+            .about-img {
+                margin-top: 20px;
+                max-width: 420px;
+            }
+
+        }
+
+        /*==============================
+        MOBILE
+===============================*/
+
+        @media (max-width: 767px) {
+
+            .about-new {
+                padding: 45px 0;
+            }
+
+            .sec-heding {
+                font-size: 28px;
+            }
+
+            .about-text {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .about-points li {
+                font-size: 15px;
+                margin-bottom: 12px;
+                padding-left: 28px;
+            }
+
+            .about-points li::before {
+                font-size: 16px;
+            }
+
+            .about-btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                padding: 12px 20px;
+            }
+
+            .about-img {
+                max-width: 100%;
+                border-radius: 12px;
+            }
+
+        }
+
+        /*==============================
+        SMALL MOBILE
+===============================*/
+
+        @media (max-width: 480px) {
+
+            .sec-heding {
+                font-size: 24px;
+            }
+
+            .about-text {
+                font-size: 15px;
+            }
+
+            .about-points li {
+                font-size: 14px;
+            }
+
+            .about-btn {
+                font-size: 15px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================== Section===================================== -->
     <section class="team-section">
         <div class="container">
 
-            <h1 class="sec-heding"><span>Our</span> Team</h1>
+            <h1 class="sec-heding"><span>Our Team</span></h1>
             <p class="sub-heding">Meet our expert trainers who guide you towards success.</p> <br /><br />
 
             <div class="team-wrapper" id="teamWrapper">
                 <!-- CARD 1 -->
                 <div class="team-card">
                     <div class="team-img">
-                        <img src="assets/images/team/tt1.jpg" alt="" />
+                        <img src="assets/images/team/tt2.jpg" alt="" />
                     </div>
 
                     <div class="team-content">
-                        <h3>Mr. Selvin Sekar</h3>
-                        <p class="dept">Owner Of The Institute</p>
-                        <p class="desc">Owner and operator of the institute with 20+ years of experience.</p>
+                        <h3>Ms. Vinija</h3>
+                        <p class="dept"> Senior Office Assistant & Tally Teacher</p>
+                        <p class="desc">Specialist in Tally, GST & Accounting training.</p>
 
                         <div class="team-icons">
                             <a href="tel:7530091724"><i class="bi bi-telephone-fill"></i></a>
@@ -1160,13 +1537,19 @@
                 <!-- CARD 2 -->
                 <div class="team-card">
                     <div class="team-img">
-                        <img src="assets/images/team/tt2.jpg" alt="" />
+                        <img src="assets/images/team/tt3.jpg" alt="" />
                     </div>
 
                     <div class="team-content">
-                        <h3>Ms. Vinija</h3>
-                        <p class="dept"> Senior Office Assistant & Tally Teacher</p>
-                        <p class="desc">Specialist in Tally, GST & Accounting training.</p>
+                        <h3>Ms. Stella Rani</h3>
+                        <p class="dept">
+                            Senior Typewriting, Shorthand & Tailoring Instructor
+                        </p>
+
+                        <p class="desc">
+                            Experienced instructor specializing in English & Tamil Typewriting, Shorthand, and
+                            Tailoring.
+                        </p>
 
                         <div class="team-icons">
                             <a href="#"><i class="bi bi-telephone-fill"></i></a>
@@ -1179,13 +1562,15 @@
                 <!-- CARD 3 -->
                 <div class="team-card">
                     <div class="team-img">
-                        <img src="assets/images/team/tt3.jpg" alt="" />
+                        <img src="assets/images/team/tt4.jpg" alt="" />
                     </div>
 
                     <div class="team-content">
-                        <h3>Ms. Stella Rani</h3>
-                        <p class="dept">Senior Typewriting & Shorthand Teacher</p>
-                        <p class="desc">Professional typing trainer for Govt exam preparation.</p>
+                        <h3>Ms. Oviya</h3>
+                        <p class="dept">Supports and administrative assistance, ensuring smooth
+                        </p>
+                        <p class="desc"> Responsible for managing Student Admissions, teaching Typewriting, Shorthand,
+                            Office Automation, handling E-Sevai services,overseeing Fees Collection </p>
 
                         <div class="team-icons">
                             <a href="#"><i class="bi bi-telephone-fill"></i></a>
@@ -1198,17 +1583,15 @@
                 <!-- CARD 11 -->
                 <div class="team-card">
                     <div class="team-img">
-                        <img src="assets/images/team/tt4.jpg" alt="" />
+                        <img src="assets/images/team/tt5.jpg" alt="" />
                     </div>
 
                     <div class="team-content">
-                        <h3>Ms. Oviya</h3>
-                        <p class="dept">Supports students with academic and administrative assistance, ensuring smooth
-                             </p>
-                        <p class="desc">Administrator at SR Indian Computers Institute,
-                            Karungal. Responsible for managing Student Admissions, teaching Typewriting, Shorthand, and
-                            Office Automation, handling E-Sevai services, and overseeing Fees Collection and clerical
-                            operations.
+                        <h3>Ms. Shaji</h3>
+                        <p class="dept">Part Time office Staff & Spoken English Teacher , Ms - Office Teacher
+                        </p>
+                        <p class="desc">Administrator at teaching Typewriting, Shorthand, and
+                            Office Automation, handling E-Sevai services
                         </p>
 
                         <div class="team-icons">
@@ -1222,32 +1605,12 @@
                 <!-- CARD 8 -->
                 <div class="team-card">
                     <div class="team-img">
-                        <img src="assets/images/team/tt5.jpg" alt="" />
-                    </div>
-
-                    <div class="team-content">
-                        <h3>Ms. Shaji</h3>
-                        <p class="dept">Part Time Staff & Spoken English Teacher</p>
-                        <p class="desc">Online Application and Students Specialist with expertise in providing technical
-                            support and training.</p>
-
-                        <div class="team-icons">
-                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
-                            <a href="#"><i class="bi bi-whatsapp"></i></a>
-                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 9 -->
-                <div class="team-card">
-                    <div class="team-img">
                         <img src="assets/images/team/tt6.jpg" alt="" />
                     </div>
 
                     <div class="team-content">
                         <h3>Ms. Jepa Jerisha</h3>
-                        <p class="dept">Print Operator</p>
+                        <p class="dept">Part Time Staff Print Operator</p>
                         <p class="desc">Experienced Print Operator with expertise in operating printing equipment and
                             ensuring high-quality output.</p>
 
@@ -1259,27 +1622,7 @@
                     </div>
                 </div>
 
-                <!-- CARD 5 -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="assets/images/team/tt7.jpg" alt="" />
-                    </div>
-
-                    <div class="team-content">
-                        <h3>Ms. Jonisha</h3>
-                        <p class="dept">Office Assistant & Ms-Office Teacher</p>
-                        <p class="desc">Experienced Office Assistant managing records, data entry, MS Office tasks, and
-                            administrative support efficiently.</p>
-
-                        <div class="team-icons">
-                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
-                            <a href="#"><i class="bi bi-whatsapp"></i></a>
-                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 6 -->
+                <!-- CARD 9 -->
                 <div class="team-card">
                     <div class="team-img">
                         <img src="assets/images/team/tt8.jpg" alt="" />
@@ -1299,7 +1642,27 @@
                     </div>
                 </div>
 
-                <!-- CARD 7 -->
+                <!-- CARD 5 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt7.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Ms. Jonisha</h3>
+                        <p class="dept">Office Assistant & Ms-Office Teacher , Coding Teacher</p>
+                        <p class="desc">Experienced Office Assistant managing records, data entry, MS Office tasks, and
+                            administrative support efficiently.</p>
+
+                        <div class="team-icons">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
                 <div class="team-card">
                     <div class="team-img">
                         <img src="assets/images/team/tt9.jpg" alt="" />
@@ -1307,7 +1670,7 @@
 
                     <div class="team-content">
                         <h3>Jebin</h3>
-                        <p class="dept">Full Stack Developer & Web Designer</p>
+                        <p class="dept">Full Stack Developer & Coding Teacher</p>
                         <p class="desc">Experienced Full Stack Developer with expertise in both frontend and backend
                             technologies, delivering robust and scalable web applications.</p>
 
@@ -1319,7 +1682,7 @@
                     </div>
                 </div>
 
-                <!-- CARD 4 -->
+                <!-- CARD 7 -->
                 <div class="team-card">
                     <div class="team-img">
                         <img src="assets/images/team/tt10.jpg" alt="" />
@@ -1339,7 +1702,7 @@
                     </div>
                 </div>
 
-                <!-- CARD 10 -->
+                <!-- CARD 4 -->
                 <div class="team-card">
                     <div class="team-img">
                         <img src="assets/images/team/tt11.jpg" alt="" />
@@ -1347,14 +1710,33 @@
 
                     <div class="team-content">
                         <h3>Ms. Enisha</h3>
-                        <p class="dept">Typewritting teacher & Drawing </p>
+                        <p class="dept">Typewritting teacher & Drawing</p>
                         <p class="desc">Experienced Typewriting Teacher and Drawing Instructor, providing quality
                             education and guidance to students.</p>
 
                         <div class="team-icons">
-                            <a href="#"><i class="bi bi-telephone-fill"></i></a>
-                            <a href="#"><i class="bi bi-whatsapp"></i></a>
-                            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                            <a href="tel:7530091724"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="https://wa.me/917530091724"><i class="bi bi-whatsapp"></i></a>
+                            <a href="mailto:srindiancomputers@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 10 -->
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="assets/images/team/tt12.jpg" alt="" />
+                    </div>
+
+                    <div class="team-content">
+                        <h3>Coming Soon</h3>
+                        <p class="dept">Coming Soon </p>
+                        <p class="desc">Coming Soon</p>
+
+                        <div class="team-icons">
+                            <a href="tel:7530091724"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="https://wa.me/917530091724"><i class="bi bi-whatsapp"></i></a>
+                            <a href="mailto:srindiancomputers@gmail.com"><i class="bi bi-envelope-fill"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1731,6 +2113,7 @@
                             <li><a href="features.html">Courses</a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="team.html">Team</a></li>
                             <li><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>

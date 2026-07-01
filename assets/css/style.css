@@ -1570,7 +1570,7 @@ a.button.generate-btn::before {
 }
 .date-blog {
   padding: 12px 15px;
-  background: var(--3, #5c33ff);
+  background:linear-gradient(90deg, #5c33ff 0%, #00ffb1 100%);
   color: var(--1, #fff);
   font-size: 18px;
   font-weight: 500;
